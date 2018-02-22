@@ -1,0 +1,443 @@
+var initAboutLL = function(){
+	
+	
+	// map
+			// The latitude and longitude of your business / place
+/*
+		var position = [45.7736431, 18.8869826]; // 45.7736431,18.8869826,15.92z
+		
+		function showGoogleMaps() {
+		
+		    var latLng = new google.maps.LatLng(position[0], position[1]);
+		
+		    var mapOptions = {
+		        zoom: 12, // initialize zoom level - the max value is 21
+		        streetViewControl: false, // hide the yellow Street View pegman
+		        scaleControl: true, // allow users to zoom the Google Map
+		        mapTypeId: google.maps.MapTypeId.ROADMAP,
+		        center: latLng,
+		        styles: [
+						  {
+						    "elementType": "geometry",
+						    "stylers": [
+						      {
+						        "color": "#f5f5f5"
+						      }
+						    ]
+						  },
+						  {
+						    "elementType": "labels.icon",
+						    "stylers": [
+						      {
+						        "visibility": "off"
+						      }
+						    ]
+						  },
+						  {
+						    "elementType": "labels.text.fill",
+						    "stylers": [
+						      {
+						        "color": "#616161"
+						      }
+						    ]
+						  },
+						  {
+						    "elementType": "labels.text.stroke",
+						    "stylers": [
+						      {
+						        "color": "#f5f5f5"
+						      }
+						    ]
+						  },
+						  {
+						    "featureType": "administrative.country",
+						    "elementType": "geometry",
+						    "stylers": [
+						      {
+						        "color": "#ffcb05"
+						      },
+						      {
+						        "visibility": "on"
+						      },
+						      {
+						        "weight": 3
+						      }
+						    ]
+						  },
+						  {
+						    "featureType": "administrative.land_parcel",
+						    "stylers": [
+						      {
+						        "visibility": "off"
+						      }
+						    ]
+						  },
+						  {
+						    "featureType": "administrative.land_parcel",
+						    "elementType": "labels.text.fill",
+						    "stylers": [
+						      {
+						        "color": "#bdbdbd"
+						      }
+						    ]
+						  },
+						  {
+						    "featureType": "administrative.neighborhood",
+						    "stylers": [
+						      {
+						        "visibility": "off"
+						      }
+						    ]
+						  },
+						  {
+						    "featureType": "administrative.neighborhood",
+						    "elementType": "geometry.fill",
+						    "stylers": [
+						      {
+						        "color": "#808080"
+						      },
+						      {
+						        "visibility": "on"
+						      }
+						    ]
+						  },
+						  {
+						    "featureType": "landscape.man_made",
+						    "elementType": "geometry.fill",
+						    "stylers": [
+						      {
+						        "color": "#808080"
+						      }
+						    ]
+						  },
+						  {
+						    "featureType": "landscape.natural",
+						    "elementType": "geometry.fill",
+						    "stylers": [
+						      {
+						        "color": "#e4e3e4"
+						      }
+						    ]
+						  },
+						  {
+						    "featureType": "landscape.natural.terrain",
+						    "elementType": "geometry.fill",
+						    "stylers": [
+						      {
+						        "color": "#d0d0d0"
+						      }
+						    ]
+						  },
+						  {
+						    "featureType": "poi",
+						    "elementType": "geometry",
+						    "stylers": [
+						      {
+						        "color": "#eeeeee"
+						      }
+						    ]
+						  },
+						  {
+						    "featureType": "poi",
+						    "elementType": "labels.text",
+						    "stylers": [
+						      {
+						        "visibility": "off"
+						      }
+						    ]
+						  },
+						  {
+						    "featureType": "poi",
+						    "elementType": "labels.text.fill",
+						    "stylers": [
+						      {
+						        "color": "#757575"
+						      }
+						    ]
+						  },
+						  {
+						    "featureType": "poi.business",
+						    "stylers": [
+						      {
+						        "visibility": "off"
+						      }
+						    ]
+						  },
+						  {
+						    "featureType": "poi.park",
+						    "elementType": "geometry",
+						    "stylers": [
+						      {
+						        "color": "#e5e5e5"
+						      }
+						    ]
+						  },
+						  {
+						    "featureType": "poi.park",
+						    "elementType": "labels.text.fill",
+						    "stylers": [
+						      {
+						        "color": "#9e9e9e"
+						      }
+						    ]
+						  },
+						  {
+						    "featureType": "road",
+						    "elementType": "geometry",
+						    "stylers": [
+						      {
+						        "color": "#ffffff"
+						      }
+						    ]
+						  },
+						  {
+						    "featureType": "road",
+						    "elementType": "geometry.stroke",
+						    "stylers": [
+						      {
+						        "color": "#ffffff"
+						      },
+						      {
+						        "weight": 5
+						      }
+						    ]
+						  },
+						  {
+						    "featureType": "road",
+						    "elementType": "labels",
+						    "stylers": [
+						      {
+						        "visibility": "off"
+						      }
+						    ]
+						  },
+						  {
+						    "featureType": "road",
+						    "elementType": "labels.icon",
+						    "stylers": [
+						      {
+						        "visibility": "off"
+						      }
+						    ]
+						  },
+						  {
+						    "featureType": "road.arterial",
+						    "elementType": "geometry.stroke",
+						    "stylers": [
+						      {
+						        "color": "#ffffff"
+						      },
+						      {
+						        "weight": 5
+						      }
+						    ]
+						  },
+						  {
+						    "featureType": "road.arterial",
+						    "elementType": "labels.text.fill",
+						    "stylers": [
+						      {
+						        "color": "#757575"
+						      }
+						    ]
+						  },
+						  {
+						    "featureType": "road.highway",
+						    "elementType": "geometry",
+						    "stylers": [
+						      {
+						        "color": "#dadada"
+						      }
+						    ]
+						  },
+						  {
+						    "featureType": "road.highway",
+						    "elementType": "geometry.stroke",
+						    "stylers": [
+						      {
+						        "color": "#ffffff"
+						      },
+						      {
+						        "weight": 4
+						      }
+						    ]
+						  },
+						  {
+						    "featureType": "road.highway",
+						    "elementType": "labels.text.fill",
+						    "stylers": [
+						      {
+						        "color": "#616161"
+						      }
+						    ]
+						  },
+						  {
+						    "featureType": "road.local",
+						    "elementType": "geometry.stroke",
+						    "stylers": [
+						      {
+						        "color": "#ffffff"
+						      },
+						      {
+						        "visibility": "on"
+						      },
+						      {
+						        "weight": 5
+						      }
+						    ]
+						  },
+						  {
+						    "featureType": "road.local",
+						    "elementType": "labels.text.fill",
+						    "stylers": [
+						      {
+						        "color": "#9e9e9e"
+						      }
+						    ]
+						  },
+						  {
+						    "featureType": "transit",
+						    "stylers": [
+						      {
+						        "visibility": "off"
+						      }
+						    ]
+						  },
+						  {
+						    "featureType": "transit.line",
+						    "elementType": "geometry",
+						    "stylers": [
+						      {
+						        "color": "#e5e5e5"
+						      }
+						    ]
+						  },
+						  {
+						    "featureType": "transit.station",
+						    "elementType": "geometry",
+						    "stylers": [
+						      {
+						        "color": "#eeeeee"
+						      }
+						    ]
+						  },
+						  {
+						    "featureType": "water",
+						    "elementType": "geometry",
+						    "stylers": [
+						      {
+						        "color": "#c9c9c9"
+						      }
+						    ]
+						  },
+						  {
+						    "featureType": "water",
+						    "elementType": "geometry.fill",
+						    "stylers": [
+						      {
+						        "color": "#35373a"
+						      }
+						    ]
+						  },
+						  {
+						    "featureType": "water",
+						    "elementType": "labels.text",
+						    "stylers": [
+						      {
+						        "visibility": "off"
+						      }
+						    ]
+						  },
+						  {
+						    "featureType": "water",
+						    "elementType": "labels.text.fill",
+						    "stylers": [
+						      {
+						        "color": "#9e9e9e"
+						      }
+						    ]
+						  }
+						]
+		    };
+		
+		    map = new google.maps.Map(document.getElementById('gmap'),
+		        mapOptions);
+		
+			var llSurface = [ 
+				{lat:18.86962, lng: 45.78381},
+				{lat:18.86105, lng: 45.77968},
+				{lat:18.85503, lng: 45.77651},
+				{lat:18.85117, lng: 45.77393},
+				{lat:18.85101, lng: 45.77192},
+				{lat:18.85151, lng: 45.76902},
+				{lat:18.85497, lng: 45.76551},
+				{lat:18.85923, lng: 45.76237},
+				{lat:18.86739, lng: 45.7595},
+				{lat:18.87629, lng: 45.75711},
+				{lat:18.88565, lng: 45.75503},
+				{lat:18.89185, lng: 45.75219},
+				{lat:18.88997, lng: 45.7648},
+				{lat:18.88859, lng: 45.7715},
+				{lat:18.88572, lng: 45.77633},
+				{lat:18.87966, lng: 45.78045},
+				{lat:18.87716, lng: 45.78254},
+				{lat:18.87439, lng: 45.78372},
+				{lat:18.86962, lng: 45.78381}
+			];
+	
+	        // Construct the polygon.
+	        var surface = new google.maps.Polygon({
+		        paths: llSurface,
+		        strokeColor: '#FFCB05',
+		        strokeOpacity: 0.95,
+		        strokeWeight: 2,
+		        fillColor: '#FF0000',
+				fillOpacity: 0.35
+	        });
+	        surface.setMap(map);
+		}
+		
+		google.maps.event.addDomListener(window, 'load', showGoogleMaps);
+		
+		wow = new WOW({
+	        boxClass:     'wow',      // default
+	        animateClass: 'animated', // default
+	        offset:       0,          // default
+	        mobile:       true,       // default
+	        live:         true        // default
+        });
+*/
+       
+       // count up
+       // @Luke, could you trigger the counters when the their paren.parent gets class "animated"?
+       
+       var options = {
+		  useEasing: true, 
+		  useGrouping: true, 
+		  separator: ',', 
+		  decimal: '.', 
+		};
+		var citizenships_num= 400,
+			companies_num= 40,
+			offices_num= 95;
+		var citizenships = new CountUp('citizenships', 0, citizenships_num, 0, 1.5, options);
+		var companies = new CountUp('companies', 0, companies_num, 0, 3.5, options);
+		var offices = new CountUp('offices', 0, offices_num, 0, 5.5, options);
+		if (!citizenships.error) {
+			citizenships.start();
+			companies.start();
+			offices.start();
+		} else {
+		  console.error(demo.error);
+		}
+}
+
+$(document).ready(function(){
+    initAboutLL();
+    wow.init();
+    $(window).on('resize', function(){
+		if ( $(window).width()<768 ) {
+			$("aside").removeClass("active");
+		}
+	});
+});
