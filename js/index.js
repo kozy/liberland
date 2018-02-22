@@ -509,14 +509,38 @@ var initmain = function(){
 
 	google.maps.event.addDomListener(window, 'load', showGoogleMaps);
 
+	// count up
+	var options = {
+		useEasing: true,
+		useGrouping: true,
+		separator: ',',
+		decimal: '.',
+	};
+
+	var citizenships_num = 400,
+	companies_num = 40,
+	offices_num = 95;
+
+	var citizenships = new CountUp('citizenships', 0, citizenships_num, 0, 1.5, options);
+	var companies = new CountUp('companies', 0, companies_num, 0, 3.5, options);
+	var offices = new CountUp('offices', 0, offices_num, 0, 5.5, options);
+
+	// setup page animations on scroll
 	wow = new WOW({
 		boxClass:     'wow',      // default
 		animateClass: 'animated', // default
 		offset:       0,          // default
 		mobile:       true,       // default
-		live:         true        // default
+		live:         true,       // default
+		callback:     function(box) {
+			// Start countup when area reached
+			if(!citizenships.error && $(box).hasClass('figures')) {
+				citizenships.start();
+				companies.start();
+				offices.start();
+			}
+		}
 	});
-
 
 	// product icons
 	$("#products a.eres").hover(function(){
@@ -543,38 +567,12 @@ var initmain = function(){
 	$("#products a.car").mouseout(function(){
 		$(this).find("img").attr("src","images/icon-car.svg");
 	})
-
-	// count up
-	// could you trigger the counters when the their paren.parent gets class "animated"?
-
-	var options = {
-		useEasing: true,
-		useGrouping: true,
-		separator: ',',
-		decimal: '.',
-	};
-
-	var citizenships_num = 400,
-	companies_num = 40,
-	offices_num = 95;
-
-	var citizenships = new CountUp('citizenships', 0, citizenships_num, 0, 1.5, options);
-	var companies = new CountUp('companies', 0, companies_num, 0, 3.5, options);
-	var offices = new CountUp('offices', 0, offices_num, 0, 5.5, options);
-
-	if (!citizenships.error) {
-		citizenships.start();
-		companies.start();
-		offices.start();
-	} else {
-		console.error(demo.error);
-	}
 }
 
 $(document).ready(function(){
 	initmain();
 	wow.init();
-	
+
 	$(window).on('resize', function(){
 		if ( $(window).width() < 992 ) {
 			var position = [45.7736431, 18.8869826];
