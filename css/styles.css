@@ -250,18 +250,20 @@ body.landing #what-headline {
     margin: 0; }
 
 body.landing #what {
+  position: relative;
   padding: 0; }
   body.landing #what #gmap {
     height: 100vh; }
   body.landing #what #overmap {
-    height: 100vh;
-    margin-top: -100vh;
-    position: relative; }
-    body.landing #what #overmap .to-bottom {
-      position: absolute;
-      bottom: 0;
-      left: 10px;
-      right: 10px; }
+    position: absolute;
+    bottom: 1vh;
+    right: 6vh
+  }
+  body.landing #what #overmap .to-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    right: 10px; }
 
 body.landing #mission {
   background: #FFCB05 url(../images/mission.svg) center bottom no-repeat;
