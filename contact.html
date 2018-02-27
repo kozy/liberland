@@ -12,17 +12,98 @@
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
   <![endif]-->
-  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false&key=AIzaSyCWvWDqzT2OjYMF3tJpiW0rZe-JKcGhnpE"></script>
+  <!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false&key=AIzaSyCWvWDqzT2OjYMF3tJpiW0rZe-JKcGhnpE"></script> -->
   <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-  
+  <!-- <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> -->
+
   <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
   <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/wowjs@1.1.3/dist/wow.min.js"></script>
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css"> -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/wowjs@1.1.3/dist/wow.min.js"></script> -->
   <link rel="stylesheet" href="css/styles.css?v=1.0">
-  <script type="text/javascript" src="js/aboutll.js"></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/countup@1.8.2/dist/countUp.min.js"></script>
+  <!-- <script type="text/javascript" src="js/aboutll.js"></script> -->
+  <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/countup@1.8.2/dist/countUp.min.js"></script> -->
+
+  <link href="/node_modules/jqvmap/dist/jqvmap.css" media="screen" rel="stylesheet" type="text/css"/>
+  <script type="text/javascript" src="/node_modules/jqvmap/dist/jquery.vmap.js"></script>
+  <script type="text/javascript" src="/node_modules/jqvmap/dist/maps/jquery.vmap.world.js" charset="utf-8"></script>
+
+  <script type="text/javascript">
+
+  $(document).ready(function(){
+    mapEmbassyTitle = {
+      'cz': 'office@liberland.org',
+      'hr': 'croatia@liberland.org',
+      'rs': 'serbia@liberland.org',
+      'fr': 'france@liberland.org',
+      'no': 'norway@liberland.org',
+      'de': 'germany@liberland.org',
+      'us': 'usa@liberland.org',
+      'hu': 'hungary@liberland.org',
+      'si': 'slovenia@liberland.org',
+      've': 'venezuela@liberland.org',
+      'gb': 'uk@liberland.org',
+      'pl': 'poland@liberland.org',
+      'pa': 'panama@liberland.org',
+      'se': 'sweden@liberland.org',
+      'om': 'oman@liberland.org',
+      'li': 'liechtenstein@liberland.org',
+      'br': 'brazil@liberland.org',
+      'sk': 'slovakia@liberland.org',
+      'ar': 'argentina@liberland.org',
+      'il': 'israel@liberland.org',
+      'ly': 'libya@liberland.org',
+      'mx': 'mexico@liberland.org',
+      'ch': 'switzerland@liberland.org',
+      'es': 'spain@liberland.org',
+      'tw': 'taiwan@liberland.org',
+      'mn': 'mongolia@liberland.org',
+      'at': 'austria@liberland.org',
+      'mk': 'macedonia@liberland.org',
+      'ec': 'ecuador@liberland.org',
+      'in': 'india@liberland.org',
+      'ua': 'ukraine@liberland.org',
+      'be': 'belgium@liberland.org',
+      'ba': 'bosnia@liberland.org',
+      'ca': 'canada@liberland.org',
+      'tr': 'turkey@liberland.org',
+      'cn': 'china@liberland.org',
+      'eg': 'egypt@liberland.org',
+      'ru': 'russia@liberland.org',
+      'dk': 'denmark@liberland.org',
+      'th': 'thailand@liberland.org',
+      'vn': 'vietnam@liberland.org',
+      'nl': 'netherland@liberland.org',
+      'ie': 'ireland@liberland.org',
+      'pk': 'pakistan@liberland.org',
+      'bd': 'bangladesh@liberland.org',
+      'uy': 'uruguay@liberland.org neni',
+      'gt': 'guatemala@liberland.org',
+      'jp': 'japan@liberland.org',
+      'ge': 'georgia@liberland.org',
+      'cl': 'chile@liberland.org',
+      '_2': 'somaliland@liberland.org'
+    };
+
+
+    jQuery('#vmap').vectorMap(
+    {
+      map: 'world_en',
+      backgroundColor: 'transparent',
+      color: '#fff',
+      hoverOpacity: 0.8,
+      enableZoom: false,
+      selectedColor: '#FFCB05',
+      normalizeFunction: 'polynomial',
+  		onLabelShow: function(e, el, code){
+  			if(typeof mapEmbassyTitle[code] != 'undefined'){
+  				title = mapEmbassyTitle[code];
+  	      		el.html(el.html()+' -&nbsp;'+title);
+  			}
+      },
+    });
+  });
+  </script>
 </head>
 
 <body class="lc">
@@ -66,20 +147,24 @@
 			</div>	<!--/.container-fluid -->
 		</nav>
 		<div class="container">
-			<div class="row">
-				<div class="col-md-6">
-					<h2>Free Republic of Liberland</h2>
-					<h1 class="text-left">Contacts</h1>
-					
-				</div>
-			</div>
-		</div>
+      <div class="row">
+        <h2>Free Republic of Liberland</h2>
+        <h1 class="text-left">Contacts</h1>
+      </div>
+
+    </div>
+          <div id="vmap" style="height: 600px; ">
+            <div class="container" style="height: auto">
+              <div class="jqvmap-zoomin"  style="color: black; background-color: #fff; height: 18px; width: 20px; border: 1px solid #646462">+</div>
+              <div class="jqvmap-zoomout" style="color: black; background-color: #fff; height: 18px; width: 20px; border: 1px solid #646462">−</div>
+            </div>
+          </div>
 	</header>
-	
+
 	<section id="countries">
 		<div class="container">
 			<div class="row">
-				
+
 				<div class="col-sm-4">
 					<div class="panel panel-default" id="#croatia">
 						<div class="panel-heading">
@@ -93,7 +178,7 @@
 						</div>
 					</div>
 				</div>
-				
+
 				<div class="col-sm-4">
 					<div class="panel panel-default" id="#serbia">
 						<div class="panel-heading">
@@ -111,7 +196,7 @@
 						</div>
 					</div>
 				</div>
-				
+
 				<div class="col-sm-4">
 					<div class="panel panel-default" id="#france">
 						<div class="panel-heading">
@@ -126,11 +211,11 @@
 						</div>
 					</div>
 				</div>
-								
+
 			</div>
-			
+
 			<div class="row">
-				
+
 				<div class="col-sm-4">
 					<div class="panel panel-default" id="#norway">
 						<div class="panel-heading">
@@ -143,7 +228,7 @@
 						</div>
 					</div>
 				</div>
-				
+
 				<div class="col-sm-4">
 					<div class="panel panel-default" id="#germany">
 						<div class="panel-heading">
@@ -157,7 +242,7 @@
 						</div>
 					</div>
 				</div>
-				
+
 				<div class="col-sm-4">
 					<div class="panel panel-default" id="#usa">
 						<div class="panel-heading">
@@ -171,11 +256,11 @@
 						</div>
 					</div>
 				</div>
-								
+
 			</div>
-			
+
 			<div class="row">
-				
+
 				<div class="col-sm-4">
 					<div class="panel panel-default" id="#hungary">
 						<div class="panel-heading">
@@ -189,7 +274,7 @@
 						</div>
 					</div>
 				</div>
-				
+
 				<div class="col-sm-4">
 					<div class="panel panel-default" id="#slovenia">
 						<div class="panel-heading">
@@ -206,7 +291,7 @@
 						</div>
 					</div>
 				</div>
-				
+
 				<div class="col-sm-4">
 					<div class="panel panel-default" id="#venezuela">
 						<div class="panel-heading">
@@ -221,7 +306,7 @@
 						</div>
 					</div>
 				</div>
-								
+
 			</div>
 			
 			<div class="row">
@@ -885,10 +970,10 @@
 							<a href="https://twitter.com/Liberland_org">Liberland on Twitter</a>
 						</li>
 					</ul>
-					
+
 				</div>
-				<div class="col-md-4">		
-					
+				<div class="col-md-4">
+
 				</div>
 				<div class="col-md-4 text-right">
 					<h4>Get a PDF Brochure</h4>
@@ -898,10 +983,10 @@
 						<span class="input-group-btn">
 							<button class="btn btn-ghost text-right">subscribe</button>
 						</span>
-					</div>			
+					</div>
 				</div>
 			</div>
-			
+
 			<div class="row">
 				<div class="col-sm-12">
 					<p>© <a href="#" class="logo">Liberland</a> All rights reserved.</p>
@@ -909,6 +994,5 @@
 			</div>
 		</div>
 	</footer>
-	<script src='js/script.js'></script>
 </body>
 </html>

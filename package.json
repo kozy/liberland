@@ -20,6 +20,7 @@
     "gulp-webserver": "^0.9.1"
   },
   "dependencies": {
-    "bourbon-neat": "^1.9.0"
+    "bourbon-neat": "^1.9.0",
+    "jqvmap": "^1.5.1"
   }
 }
