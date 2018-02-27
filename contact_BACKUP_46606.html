@@ -1,0 +1,1003 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Contact Liberland</title>
+  <meta name="description" content="Official website of Liberland">
+  <meta name="author" content="Liberland IT">
+
+  <link rel="stylesheet" href="css/fontello.css">
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+  <!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false&key=AIzaSyCWvWDqzT2OjYMF3tJpiW0rZe-JKcGhnpE"></script> -->
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> -->
+
+  <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
+  <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css"> -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/wowjs@1.1.3/dist/wow.min.js"></script> -->
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+  <!-- <script type="text/javascript" src="js/aboutll.js"></script> -->
+  <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/countup@1.8.2/dist/countUp.min.js"></script> -->
+
+  <link href="/node_modules/jqvmap/dist/jqvmap.css" media="screen" rel="stylesheet" type="text/css"/>
+  <script type="text/javascript" src="/node_modules/jqvmap/dist/jquery.vmap.js"></script>
+  <script type="text/javascript" src="/node_modules/jqvmap/dist/maps/jquery.vmap.world.js" charset="utf-8"></script>
+
+  <script type="text/javascript">
+
+  $(document).ready(function(){
+    mapEmbassyTitle = {
+      'cz': 'office@liberland.org',
+      'hr': 'croatia@liberland.org',
+      'rs': 'serbia@liberland.org',
+      'fr': 'france@liberland.org',
+      'no': 'norway@liberland.org',
+      'de': 'germany@liberland.org',
+      'us': 'usa@liberland.org',
+      'hu': 'hungary@liberland.org',
+      'si': 'slovenia@liberland.org',
+      've': 'venezuela@liberland.org',
+      'gb': 'uk@liberland.org',
+      'pl': 'poland@liberland.org',
+      'pa': 'panama@liberland.org',
+      'se': 'sweden@liberland.org',
+      'om': 'oman@liberland.org',
+      'li': 'liechtenstein@liberland.org',
+      'br': 'brazil@liberland.org',
+      'sk': 'slovakia@liberland.org',
+      'ar': 'argentina@liberland.org',
+      'il': 'israel@liberland.org',
+      'ly': 'libya@liberland.org',
+      'mx': 'mexico@liberland.org',
+      'ch': 'switzerland@liberland.org',
+      'es': 'spain@liberland.org',
+      'tw': 'taiwan@liberland.org',
+      'mn': 'mongolia@liberland.org',
+      'at': 'austria@liberland.org',
+      'mk': 'macedonia@liberland.org',
+      'ec': 'ecuador@liberland.org',
+      'in': 'india@liberland.org',
+      'ua': 'ukraine@liberland.org',
+      'be': 'belgium@liberland.org',
+      'ba': 'bosnia@liberland.org',
+      'ca': 'canada@liberland.org',
+      'tr': 'turkey@liberland.org',
+      'cn': 'china@liberland.org',
+      'eg': 'egypt@liberland.org',
+      'ru': 'russia@liberland.org',
+      'dk': 'denmark@liberland.org',
+      'th': 'thailand@liberland.org',
+      'vn': 'vietnam@liberland.org',
+      'nl': 'netherland@liberland.org',
+      'ie': 'ireland@liberland.org',
+      'pk': 'pakistan@liberland.org',
+      'bd': 'bangladesh@liberland.org',
+      'uy': 'uruguay@liberland.org neni',
+      'gt': 'guatemala@liberland.org',
+      'jp': 'japan@liberland.org',
+      'ge': 'georgia@liberland.org',
+      'cl': 'chile@liberland.org',
+      '_2': 'somaliland@liberland.org'
+    };
+
+
+    jQuery('#vmap').vectorMap(
+    {
+      map: 'world_en',
+      backgroundColor: 'transparent',
+      color: '#fff',
+      hoverOpacity: 0.8,
+      enableZoom: false,
+      selectedColor: '#FFCB05',
+      normalizeFunction: 'polynomial',
+  		onLabelShow: function(e, el, code){
+  			if(typeof mapEmbassyTitle[code] != 'undefined'){
+  				title = mapEmbassyTitle[code];
+  	      		el.html(el.html()+' -&nbsp;'+title);
+  			}
+      },
+    });
+  });
+  </script>
+</head>
+
+<body class="lc">
+	<header>
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="index.html"><img src="images/coatofarms.svg" width="24"></a>
+				</div>
+				<div id="navbar" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#news">News</a></li>
+						<li>
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About<span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="about-liberland.html">Liberland</a></li>
+								<li><a href="constitution.html">Constitution</a></li>
+								<li><a href="laws.html">Laws</a></li>
+								<li><a href="finances.html">Finances</a></li>
+							</ul>
+						</li>
+						<li class="active"><a href="contact.html">Contact</a></li>
+						<li><a href="constitution.html">Log In</a></li>
+<!--
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">En<span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="#">En</a></li>
+								<li><a href="#">Cz</a></li>
+							</ul>
+						</li>
+-->
+					</ul>
+				</div>	<!--/.nav-collapse -->
+			</div>	<!--/.container-fluid -->
+		</nav>
+
+		<div class="container">
+      <div class="row">
+        <h2>Free Republic of Liberland</h2>
+        <h1 class="text-left">Contacts</h1>
+      </div>
+
+    </div>
+          <div id="vmap" style="height: 600px; ">
+            <div class="container" style="height: auto">
+              <div class="jqvmap-zoomin"  style="color: black; background-color: #fff; height: 18px; width: 20px; border: 1px solid #646462">+</div>
+              <div class="jqvmap-zoomout" style="color: black; background-color: #fff; height: 18px; width: 20px; border: 1px solid #646462">−</div>
+            </div>
+          </div>
+	</header>
+
+	<section id="countries">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-sm-4">
+					<div class="panel panel-default" id="#croatia">
+						<div class="panel-heading">
+					    	<h3 class="panel-title">CROATIA</h3>
+						</div>
+						<div class="panel-body">
+					    	<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;
+					    	<a href="mailto:croatia@liberland.org">croatia@liberland.org</a><br/>
+							<span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>&nbsp;
+							<a href="tel:+385989198844">+385 98 919 8844</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-sm-4">
+					<div class="panel panel-default" id="#serbia">
+						<div class="panel-heading">
+					    	<h3 class="panel-title">SERBIA</h3>
+						</div>
+						<div class="panel-body">
+							<strong>Neven Ristić</strong><br/>
+					    	Mesna kancelarija Bezdan,<br/>
+							Žrtava Fašizma 3<br/>
+							Bezdan 252 70<br/>
+							<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;
+							<a href="mailto:serbia@liberland.org">serbia@liberland.org</a><br/>
+							<img src="images/icon-fb.svg" height="14px"/>&nbsp;
+							<a href="https://www.facebook.com/LiberlandSerbia/">Liberland Serbia</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-sm-4">
+					<div class="panel panel-default" id="#france">
+						<div class="panel-heading">
+					    	<h3 class="panel-title">FRANCE</h3>
+						</div>
+						<div class="panel-body">
+					    	<strong>Noel Melet</strong><br/>
+					    	<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;
+							<a href="mailto:france@liberland.org">france@liberland.org</a><br/>
+							<img src="images/icon-fb.svg" height="14px"/>&nbsp;
+							<a href="https://www.facebook.com/AmbassadeduLIBERLANDenFrance/">Ambassade en France</a>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="row">
+
+				<div class="col-sm-4">
+					<div class="panel panel-default" id="#norway">
+						<div class="panel-heading">
+					    	<h3 class="panel-title">NORWAY</h3>
+						</div>
+						<div class="panel-body">
+					    	<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;
+					    	<a href="mailto:norway@liberland.org">norway@liberland.org</a><br/>
+							<span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>&nbsp;
+						</div>
+					</div>
+				</div>
+
+				<div class="col-sm-4">
+					<div class="panel panel-default" id="#germany">
+						<div class="panel-heading">
+					    	<h3 class="panel-title">GERMANY</h3>
+						</div>
+						<div class="panel-body">
+							<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;
+							<a href="mailto:germany@liberland.org">germany@liberland.org</a><br/>
+							<img src="images/icon-fb.svg" height="14px"/>&nbsp;
+							<a href="https://www.facebook.com/Liberland-Germany-offizielle-Gemeinschaft-862431363829369/">Offizielle Gemeinschaft</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-sm-4">
+					<div class="panel panel-default" id="#usa">
+						<div class="panel-heading">
+					    	<h3 class="panel-title">The USA</h3>
+						</div>
+						<div class="panel-body">
+					    	<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;
+							<a href="mailto:usa@liberland.org">usa@liberland.org</a><br/>
+							<img src="images/icon-fb.svg" height="14px"/>&nbsp;
+							<a href="https://www.facebook.com/Liberland.USA/">Liberland USA</a>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="row">
+
+				<div class="col-sm-4">
+					<div class="panel panel-default" id="#hungary">
+						<div class="panel-heading">
+					    	<h3 class="panel-title">HUNGARY</h3>
+						</div>
+						<div class="panel-body">
+					    	<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;
+					    	<a href="mailto:hungary@liberland.org">hungary@liberland.org</a><br/>
+							<img src="images/icon-fb.svg" height="14px"/>&nbsp;
+							<a href="https://www.facebook.com/groups/liberlandhungary">Liberland Hungary</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-sm-4">
+					<div class="panel panel-default" id="#slovenia">
+						<div class="panel-heading">
+					    	<h3 class="panel-title">SLOVENIA</h3>
+						</div>
+						<div class="panel-body">
+							<strong>Denis Pirc</strong><br/>
+					    	Mlakarjeva ulica 7a<br/>
+					    	1241 Kamnik<br/>
+							<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;
+							<a href="mailto:slovenia@liberland.org">slovenia@liberland.org</a><br/>
+							<span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>&nbsp;
+							<a href="tel:++38640663336">+386 40 663 336</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-sm-4">
+					<div class="panel panel-default" id="#venezuela">
+						<div class="panel-heading">
+					    	<h3 class="panel-title">VENEZUELA</h3>
+						</div>
+						<div class="panel-body">
+					    	<strong>Noel Melet</strong><br/>
+					    	<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;
+							<a href="mailto:venezuela@liberland.org">venezuela@liberland.org</a><br/>
+							<img src="images/icon-fb.svg" height="14px"/>&nbsp;
+							<a href="https://www.facebook.com/Liberland.Venezuela/">Liberland Venezuela</a>
+						</div>
+					</div>
+				</div>
+
+			</div>
+<<<<<<< HEAD
+			
+			<div class="row">
+				
+				<div class="col-sm-4">
+					<div class="panel panel-default" id="#uk">
+						<div class="panel-heading">
+					    	<h3 class="panel-title">The UNITED KINGDOM</h3>
+						</div>
+						<div class="panel-body">
+					    	<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;
+							<a href="mailto:uk@liberland.org">uk@liberland.org</a><br/>
+							<img src="images/icon-fb.svg" height="14px"/>&nbsp;
+							<a href="https://www.facebook.com/The-Embassy-of-Liberland-in-the-United-Kingdom-1416462232008040/">The Embassy in the UK</a>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-sm-4">
+					<div class="panel panel-default" id="#poland">
+						<div class="panel-heading">
+					    	<h3 class="panel-title">POLAND</h3>
+						</div>
+						<div class="panel-body">
+					    	<strong></strong><br/>
+					    	<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;
+							<a href="mailto:poland@liberland.org">poland@liberland.org</a><br/>
+							<img src="images/icon-fb.svg" height="14px"/>&nbsp;
+							<a href="https://www.facebook.com/liberlandambasadaPL">Przedstawicielstwo w Polsce</a>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-sm-4">
+					<div class="panel panel-default" id="#panama">
+						<div class="panel-heading">
+					    	<h3 class="panel-title">PANAMA</h3>
+						</div>
+						<div class="panel-body">
+					    	<strong></strong><br/>
+					    	<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;
+							<a href="mailto:panama@liberland.org">panama@liberland.org</a><br/>
+						</div>
+					</div>
+				</div>
+								
+			</div>
+			
+			<div class="row">
+				
+				<div class="col-sm-4">
+					<div class="panel panel-default" id="#sweden">
+						<div class="panel-heading">
+					    	<h3 class="panel-title">SWEDEN</h3>
+						</div>
+						<div class="panel-body">
+					    	<strong></strong><br/>
+					    	<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;
+							<a href="mailto:sweden@liberland.org">sweden@liberland.org</a><br/>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-sm-4">
+					<div class="panel panel-default" id="#oman">
+						<div class="panel-heading">
+					    	<h3 class="panel-title">OMAN</h3>
+						</div>
+						<div class="panel-body">
+					    	<strong></strong><br/>
+					    	<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;
+							<a href="mailto:oman@liberland.org">oman@liberland.org</a><br/>
+							<img src="images/icon-fb.svg" height="14px"/>&nbsp;
+							<a href="https://www.facebook.com/">Liberland </a>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-sm-4">
+					<div class="panel panel-default" id="#lichtenstein">
+						<div class="panel-heading">
+					    	<h3 class="panel-title">LIECHTENSTEIN</h3>
+						</div>
+						<div class="panel-body">
+					    	<strong></strong><br/>
+					    	<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;
+							<a href="mailto:lichtenstein@liberland.org">lichtenstein@liberland.org</a><br/>
+						</div>
+					</div>
+				</div>
+								
+			</div>
+			
+			<div class="row">
+				
+				<div class="col-sm-4">
+					<div class="panel panel-default" id="#brazil">
+						<div class="panel-heading">
+					    	<h3 class="panel-title">BRAZIL</h3>
+						</div>
+						<div class="panel-body">
+					    	<strong></strong><br/>
+					    	<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;
+							<a href="mailto:brazil@liberland.org">brazil@liberland.org</a><br/>
+							<img src="images/icon-fb.svg" height="14px"/>&nbsp;
+							<a href="https://www.facebook.com/liberlandbrasil?fref=ts">Liberland Brazil</a>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-sm-4">
+					<div class="panel panel-default" id="#slovakia">
+						<div class="panel-heading">
+					    	<h3 class="panel-title">SLOVAKIA</h3>
+						</div>
+						<div class="panel-body">
+					    	<strong></strong><br/>
+					    	<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;
+							<a href="mailto:slovakia@liberland.org">slovakia@liberland.org</a><br/>
+							<img src="images/icon-fb.svg" height="14px"/>&nbsp;
+							<a href="https://www.facebook.com/liberlandcity?fref=ts">Liberland Slovakia</a>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-sm-4">
+					<div class="panel panel-default" id="#argentina">
+						<div class="panel-heading">
+					    	<h3 class="panel-title">ARGENTINA</h3>
+						</div>
+						<div class="panel-body">
+					    	<strong></strong><br/>
+					    	<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;
+							<a href="mailto:argentina@liberland.org">argentina@liberland.org</a><br/>
+<!--
+							<img src="images/icon-fb.svg" height="14px"/>&nbsp;
+							<a href="https://www.facebook.com/">Liberland </a>
+-->
+						</div>
+					</div>
+				</div>
+								
+			</div>
+			
+			<div class="row">
+				
+				<div class="col-sm-4">
+					<div class="panel panel-default" id="#israel">
+						<div class="panel-heading">
+					    	<h3 class="panel-title">ISRAEL</h3>
+						</div>
+						<div class="panel-body">
+					    	<strong></strong><br/>
+					    	<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;
+							<a href="mailto:israel@liberland.org">israel@liberland.org</a><br/>						</div>
+					</div>
+				</div>
+				
+				<div class="col-sm-4">
+					<div class="panel panel-default" id="#libya">
+						<div class="panel-heading">
+					    	<h3 class="panel-title">LIBYA</h3>
+						</div>
+						<div class="panel-body">
+					    	<strong></strong><br/>
+					    	<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;
+							<a href="mailto:libya@liberland.org">libya@liberland.org</a><br/>
+							<img src="images/icon-fb.svg" height="14px"/>&nbsp;
+							<a href="https://www.facebook.com/groups/881182398633644/about/">Liberland Libya</a>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-sm-4">
+					<div class="panel panel-default" id="#mexico">
+						<div class="panel-heading">
+					    	<h3 class="panel-title">MEXICO</h3>
+						</div>
+						<div class="panel-body">
+					    	<strong></strong><br/>
+					    	<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;
+							<a href="mailto:mexico@liberland.org">mexico@liberland.org</a><br/>
+							<img src="images/icon-fb.svg" height="14px"/>&nbsp;
+							<a href="https://www.facebook.com/Consulate-of-Liberland-in-Mexico-1613959018885216/">Consulate in Mexico</a>
+						</div>
+					</div>
+				</div>
+								
+			</div>
+			
+			<div class="row">
+				
+				<div class="col-sm-4">
+					<div class="panel panel-default" id="#switzerland">
+						<div class="panel-heading">
+					    	<h3 class="panel-title">SWITZERLAND</h3>
+						</div>
+						<div class="panel-body">
+					    	<strong></strong><br/>
+					    	<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;
+							<a href="mailto:switzerland@liberland.org">switzerland@liberland.org</a><br/>
+<!--
+							<img src="images/icon-fb.svg" height="14px"/>&nbsp;
+							<a href="https://www.facebook.com/">Liberland </a>
+-->
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-sm-4">
+					<div class="panel panel-default" id="#spain">
+						<div class="panel-heading">
+					    	<h3 class="panel-title">SPAIN</h3>
+						</div>
+						<div class="panel-body">
+					    	<strong></strong><br/>
+					    	<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;
+							<a href="mailto:spain@liberland.org">spain@liberland.org</a><br/>
+							<img src="images/icon-fb.svg" height="14px"/>&nbsp;
+							<a href="https://www.facebook.com/LiberlandEsp">Liberland España</a>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-sm-4">
+					<div class="panel panel-default" id="#netherland">
+						<div class="panel-heading">
+					    	<h3 class="panel-title">NETHERLANDS</h3>
+						</div>
+						<div class="panel-body">
+					    	<strong></strong><br/>
+					    	<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;
+							<a href="mailto:netherland@liberland.org">netherland@liberland.org</a><br/>
+<!--
+							<img src="images/icon-fb.svg" height="14px"/>&nbsp;
+							<a href="https://www.facebook.com/">Liberland </a>
+-->
+						</div>
+					</div>
+				</div>
+								
+			</div>
+			
+			<div class="row">
+				
+				<div class="col-sm-4">
+					<div class="panel panel-default" id="#austria">
+						<div class="panel-heading">
+					    	<h3 class="panel-title">AUSTRIA</h3>
+						</div>
+						<div class="panel-body">
+					    	<strong></strong><br/>
+					    	<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;
+							<a href="mailto:@liberland.org">austria@liberland.org</a><br/>
+							
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-sm-4">
+					<div class="panel panel-default" id="#denmark">
+						<div class="panel-heading">
+					    	<h3 class="panel-title">DENMARK</h3>
+						</div>
+						<div class="panel-body">
+					    	<strong></strong><br/>
+					    	<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;
+							<a href="mailto:denmark@liberland.org">denmark@liberland.org</a><br/>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-sm-4">
+					<div class="panel panel-default" id="#turkey">
+						<div class="panel-heading">
+					    	<h3 class="panel-title">TURKEY</h3>
+						</div>
+						<div class="panel-body">
+					    	<strong></strong><br/>
+					    	<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;
+							<a href="mailto:turkey@liberland.org">turkey@liberland.org</a><br/>
+							<img src="images/icon-fb.svg" height="14px"/>&nbsp;
+							<a href="https://www.facebook.com/liberlandofficeinturkey">Office in Turkey</a>
+						</div>
+					</div>
+				</div>
+								
+			</div>
+
+			<div class="row">
+				
+				<div class="col-sm-4">
+					<div class="panel panel-default" id="#canada">
+						<div class="panel-heading">
+					    	<h3 class="panel-title">CANADA</h3>
+						</div>
+						<div class="panel-body">
+					    	<strong></strong><br/>
+					    	<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;
+							<a href="mailto:canada@liberland.org">canada@liberland.org</a><br/>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-sm-4">
+					<div class="panel panel-default" id="#guatemala">
+						<div class="panel-heading">
+					    	<h3 class="panel-title">GUATEMALA</h3>
+						</div>
+						<div class="panel-body">
+					    	<strong></strong><br/>
+					    	<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;
+							<a href="mailto:guatemala@liberland.org">guatemala@liberland.org</a><br/>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-sm-4">
+					<div class="panel panel-default" id="#egypt">
+						<div class="panel-heading">
+					    	<h3 class="panel-title">EGYPT</h3>
+						</div>
+						<div class="panel-body">
+					    	<strong></strong><br/>
+					    	<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;
+							<a href="mailto:egypt@liberland.org">egypt@liberland.org</a><br/>
+						</div>
+					</div>
+				</div>
+								
+			</div>
+
+			<div class="row">
+				
+				<div class="col-sm-4">
+					<div class="panel panel-default" id="#japan">
+						<div class="panel-heading">
+					    	<h3 class="panel-title">JAPAN</h3>
+						</div>
+						<div class="panel-body">
+					    	<strong></strong><br/>
+					    	<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;
+							<a href="mailto:japan@liberland.org">japan@liberland.org</a><br/>
+							<img src="images/icon-fb.svg" height="14px"/>&nbsp;
+							<a href="https://www.facebook.com/Liberland-Japan-%E3%83%AA%E3%83%99%E3%83%AB%E3%83%A9%E3%83%B3%E3%83%89-1001255749938602/">Liberland Japan - リベルランド</a>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-sm-4">
+					<div class="panel panel-default" id="#chile">
+						<div class="panel-heading">
+					    	<h3 class="panel-title">CHILE</h3>
+						</div>
+						<div class="panel-body">
+					    	<strong></strong><br/>
+					    	<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;
+							<a href="mailto:chile@liberland.org">chile@liberland.org</a><br/>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-sm-4">
+					<div class="panel panel-default" id="#belgium">
+						<div class="panel-heading">
+					    	<h3 class="panel-title">BELGIUM</h3>
+						</div>
+						<div class="panel-body">
+					    	<strong></strong><br/>
+					    	<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;
+							<a href="mailto:belgium@liberland.org">belgium@liberland.org</a><br/>
+						</div>
+					</div>
+				</div>
+								
+			</div>
+
+			<div class="row">
+				
+				<div class="col-sm-4">
+					<div class="panel panel-default" id="#hongkong">
+						<div class="panel-heading">
+					    	<h3 class="panel-title">HONG KONG</h3>
+						</div>
+						<div class="panel-body">
+					    	<strong></strong><br/>
+					    	<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;
+							<a href="mailto:hongkong@liberland.org">hongkong@liberland.org</a><br/>
+							<img src="images/icon-fb.svg" height="14px"/>&nbsp;
+							<a href="https://www.facebook.com/fa.liberland.hk?fref=ts">利伯蘭駐香港總領事館 Consulate General of Liberland in Hong Kong</a>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-sm-4">
+					<div class="panel panel-default" id="#southkorea">
+						<div class="panel-heading">
+					    	<h3 class="panel-title">SOUTH KOREA</h3>
+						</div>
+						<div class="panel-body">
+					    	<strong></strong><br/>
+					    	<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;
+							<a href="mailto:southkorea@liberland.org">southkorea@liberland.org</a><br/>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-sm-4">
+					<div class="panel panel-default" id="#taiwan">
+						<div class="panel-heading">
+					    	<h3 class="panel-title">TAIWAN</h3>
+						</div>
+						<div class="panel-body">
+					    	<strong></strong><br/>
+					    	<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;
+							<a href="mailto:taiwan@liberland.org">taiwan@liberland.org</a><br/>
+						</div>
+					</div>
+				</div>
+								
+			</div>
+
+			<div class="row">
+				
+				<div class="col-sm-4">
+					<div class="panel panel-default" id="#mongolia">
+						<div class="panel-heading">
+					    	<h3 class="panel-title">MONGOLIA</h3>
+						</div>
+						<div class="panel-body">
+					    	<strong></strong><br/>
+					    	<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;
+							<a href="mailto:mongolia@liberland.org">mongolia@liberland.org</a><br/>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-sm-4">
+					<div class="panel panel-default" id="#india">
+						<div class="panel-heading">
+					    	<h3 class="panel-title">INDIA</h3>
+						</div>
+						<div class="panel-body">
+					    	<strong></strong><br/>
+					    	<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;
+							<a href="mailto:india@liberland.org">india@liberland.org</a><br/>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-sm-4">
+					<div class="panel panel-default" id="#austria">
+						<div class="panel-heading">
+					    	<h3 class="panel-title">AUSTRIA</h3>
+						</div>
+						<div class="panel-body">
+					    	<strong></strong><br/>
+					    	<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;
+							<a href="mailto:austria@liberland.org">austria@liberland.org</a><br/>
+						</div>
+					</div>
+				</div>
+								
+			</div>
+
+			<div class="row">
+				
+				<div class="col-sm-4">
+					<div class="panel panel-default" id="#bosnia">
+						<div class="panel-heading">
+					    	<h3 class="panel-title">BOSNIA And HERZEGOVINA</h3>
+						</div>
+						<div class="panel-body">
+					    	<strong></strong><br/>
+					    	<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;
+							<a href="mailto:bosnia@liberland.org">bosnia@liberland.org</a><br/>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-sm-4">
+					<div class="panel panel-default" id="#ukraine">
+						<div class="panel-heading">
+					    	<h3 class="panel-title">UKRAINE</h3>
+						</div>
+						<div class="panel-body">
+					    	<strong></strong><br/>
+					    	<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;
+							<a href="mailto:ukraine@liberland.org">ukraine@liberland.org</a><br/>
+						</div>
+					</div>
+				</div>
+				
+				
+				
+				<div class="col-sm-4">
+					<div class="panel panel-default" id="#thailand">
+						<div class="panel-heading">
+					    	<h3 class="panel-title">THAILAND</h3>
+						</div>
+						<div class="panel-body">
+					    	<strong>Claudio Pizzini</strong><br/>
+					    	44/136 Moo 12 Nongprue,<br/>
+					    	Banglamung 20150 Pattaya<br/>
+					    	Thailand<br/>
+					    	<span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>&nbsp;
+							<a href="tel:+6633005915">+66 (0)33 005 915</a><br/>
+							<span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>&nbsp;
+							<a href="tel:+66957046535 ">+66 (0)95 704 6535</a><br/>
+					    	<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;
+							<a href="mailto:thailand@liberland.org">thailand@liberland.org</a><br/>
+						</div>
+					</div>
+				</div>
+								
+			</div>
+
+			<div class="row">
+				
+				<div class="col-sm-4">
+					<div class="panel panel-default" id="#china">
+						<div class="panel-heading">
+					    	<h3 class="panel-title">CHINA</h3>
+						</div>
+						<div class="panel-body">
+					    	<strong></strong><br/>
+					    	<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;
+							<a href="mailto:china@liberland.org">china@liberland.org</a><br/>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-sm-4">
+					<div class="panel panel-default" id="#bangladesh">
+						<div class="panel-heading">
+					    	<h3 class="panel-title">BANGLADESH</h3>
+						</div>
+						<div class="panel-body">
+					    	<strong>Claudio Pizzini</strong><br/>
+					    	Anamika Concord, 583 Begum Rokeya Avenue<br/>
+					    	Shewrapara, Mirpur Dhaka 1216<br/>
+							<span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>&nbsp;
+							<a href="tel:+66957046535 ">+880 1979 400 111</a><br/>
+					    	<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;
+							<a href="mailto:bangladesh@liberland.org">bangladesh@liberland.org</a><br/>
+							<img src="images/icon-fb.svg" height="14px"/>&nbsp;
+							<a href="https://www.facebook.com/liberlandbangladesh/">Representation in Bangladesh</a>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-sm-4">
+					<div class="panel panel-default" id="#ecuador">
+						<div class="panel-heading">
+					    	<h3 class="panel-title">ECUADOR</h3>
+						</div>
+						<div class="panel-body">
+					    	<strong></strong><br/>
+					    	<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;
+							<a href="mailto:ecuador@liberland.org">ecuador@liberland.org</a><br/>
+						</div>
+					</div>
+				</div>
+								
+			</div>
+			
+			<div class="row">
+				
+				<div class="col-sm-4">
+					<div class="panel panel-default" id="#macedonia">
+						<div class="panel-heading">
+					    	<h3 class="panel-title">MACEDONIA</h3>
+						</div>
+						<div class="panel-body">
+					    	<strong></strong><br/>
+					    	<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;
+							<a href="mailto:macedonia@liberland.org">macedonia@liberland.org</a><br/>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-sm-4">
+					<div class="panel panel-default" id="#vietnam">
+						<div class="panel-heading">
+					    	<h3 class="panel-title">VIETNAM</h3>
+						</div>
+						<div class="panel-body">
+					    	<strong></strong><br/>
+					    	<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;
+							<a href="mailto:vietnam@liberland.org">vietnam@liberland.org</a><br/>
+						</div>
+					</div>
+				</div>
+			
+				<div class="col-sm-4">
+					<div class="panel panel-default" id="#georgia">
+						<div class="panel-heading">
+					    	<h3 class="panel-title">GEORGIA</h3>
+						</div>
+						<div class="panel-body">
+					    	<strong></strong><br/>
+					    	<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;
+							<a href="mailto:georgia@liberland.org">georgia@liberland.org</a><br/>
+						</div>
+					</div>
+				</div>
+								
+			</div>
+			
+			<div class="row">
+				
+				<div class="col-sm-4">
+					<div class="panel panel-default" id="#pakistan">
+						<div class="panel-heading">
+					    	<h3 class="panel-title">PAKISTAN</h3>
+						</div>
+						<div class="panel-body">
+					    	<strong>Faisal Butt</strong><br/>
+					    	Adr.:Amesbury Mead Farm<br/>
+							Stewardstone Road<br/>
+							London<br/>
+							E4 7RA<br/>
+							<span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>&nbsp;
+							<a href="tel:+447776636656">+44 777 6636656</a><br/>
+					    	<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;
+							<a href="mailto:pakistan@liberland.org">pakistan@liberland.org</a><br/>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-sm-4">
+					<div class="panel panel-default" id="#russia">
+						<div class="panel-heading">
+					    	<h3 class="panel-title">RUSSIA</h3>
+						</div>
+						<div class="panel-body">
+					    	<strong></strong><br/>
+					    	<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;
+							<a href="mailto:russia@liberland.org">russia@liberland.org</a><br/>
+						</div>
+					</div>
+				</div>
+								
+			</div>
+			
+=======
+
+>>>>>>> 6344ac1d5d7e8d6443e670098003bc52cd7cfa11
+		</div>
+	</section>
+	<footer>
+		<div class="container" class="bg-dark">
+			<div class="row">
+				<div class="col-md-4">
+					<h4>Links</h4>
+					<ul>
+						<li>
+							<a href="http://liberlandpress.com/">Liberland Press</a>
+						</li>
+						<li>
+							<a href="https://www.facebook.com/liberland/">Liberland on facebook</a>
+						</li>
+						<li>
+							<a href="https://twitter.com/Liberland_org">Liberland on Twitter</a>
+						</li>
+					</ul>
+
+				</div>
+				<div class="col-md-4">
+
+				</div>
+				<div class="col-md-4 text-right">
+					<h4>Get a PDF Brochure</h4>
+					<p>By Subscribing to the Newsletter</p>
+					<div class="input-group">
+						<input type="email" class="form-control" placeholder="your@email.here">
+						<span class="input-group-btn">
+							<button class="btn btn-ghost text-right">subscribe</button>
+						</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-12">
+					<p>© <a href="#" class="logo">Liberland</a> All rights reserved.</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>
