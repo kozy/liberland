@@ -481,7 +481,11 @@ body {
 						width: 100%;
 						max-width: 100px;
 						filter: grayscale(100%);
-					}	
+						margin-bottom: 10px;
+					}
+					 &:hover img {
+					    filter: grayscale(0%);
+				    }
 				}
 			}
 		}
