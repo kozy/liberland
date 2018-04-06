@@ -181,11 +181,23 @@ button, a[class^="btn"] {
 	}
 }
 
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+	background-color: black;
+}
+
+
+
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
+	color: #000;
+	background-color: transparent;
+}
+
 nav.navbar {
-	height: 50px;
 	border-radius: 0;
 	border: none;
-	background: linear-gradient(to bottom, $yellow 39%,black 40%,black 60%,$yellow 61%);
+	background: #ffcc06 url(/images/header-bg.png) repeat-x;
+	margin-bottom: 0;
+
 
 	a.navbar-brand {
 		    padding: 10px 15px;
@@ -197,6 +209,11 @@ nav.navbar {
 					box-shadow: 0 0 5px rgba(black,.5);
 				}
 			}
+	}
+	.navbar-collapse {
+  	margin: 0;
+  	padding: 0;
+		border: 0;
 	}
 	.navbar-toggle {
 		background: black;
@@ -212,7 +229,6 @@ nav.navbar {
 		padding-left: 0;
 		margin: 0;
 		li {
-			display: inline-block;
 			font-family: 'Alfa Slab One', serif;
 			margin-left: 10px;
 			a {
@@ -330,7 +346,7 @@ body {
 		}
 	}
 	&.landing{
-		header {
+		#intro {
 
  			background: $gray-m url(../images/hero.svg) center center no-repeat;
 			background-size: cover;
