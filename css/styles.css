@@ -415,7 +415,7 @@ body.aboutll #counter .figures {
     padding-bottom: 0; }
 
 body.lc header {
-  background: #646462;
+  background: #555658;
   background-position: 70% bottom;
   background-size: cover;
   height: auto;
@@ -437,6 +437,43 @@ body.lc #laws p {
 
 body.lc #donations ul li {
   margin-bottom: 25px; }
+
+body.contact {
+  background: #555658; }
+  body.contact #general {
+    background: white; }
+    body.contact #general .alert-primary {
+      border: 3px solid #FFCB05;
+      background: rgba(255, 203, 5, 0.25);
+      padding: 30px; }
+    body.contact #general table {
+      width: 100%; }
+      body.contact #general table thead {
+        background: #FFCB05;
+        font-weight: bold; }
+      body.contact #general table tr {
+        background: rgba(208, 216, 222, 0.35); }
+        body.contact #general table tr:nth-child(odd) {
+          background: rgba(208, 216, 222, 0); }
+        body.contact #general table tr td {
+          padding: 3px;
+          display: block;
+          width: 50%; }
+          body.contact #general table tr td:last-child {
+            width: 100%; }
+          @media (min-width: 992px) {
+            body.contact #general table tr td {
+              display: table-cell;
+              width: 20%; } }
+  body.contact .panel {
+    border: none;
+    margin-bottom: 30px; }
+    body.contact .panel .panel-heading {
+      border-radius: 0;
+      border: none;
+      background: #FFCB05; }
+    body.contact .panel .panel-body {
+      height: 170px; }
 
 .wait1 {
   -webkit-animation-delay: 0.25s;

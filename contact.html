@@ -106,11 +106,21 @@
       }
 
     });
+    
+   	
+	$("#sort_contacts>div").sort(function (a, b) {
+	    return parseInt(a.id) > parseInt(b.id);
+	}).each(function () {
+	    var elem = $(this);
+	    elem.remove();
+	    $(elem).appendTo("#sort_contacts");
+	});
+    
   });
   </script>
 </head>
 
-<body class="lc">
+<body class="lc contact">
 	<header>
 		<nav class="navbar navbar-default">
 			<div class="container-fluid">
@@ -164,13 +174,72 @@
             </div>
           </div>
 	</header>
-
-	<section id="countries">
+	<section id="general">
 		<div class="container">
 			<div class="row">
+				<div class="col-md-12">
+					<div class="alert alert-primary" role="alert">
+						<h4>Important notice:</h4>
+						Due to overwhelming interest from around the world, we are currently unable to process individual e-mails with requests or answer individual questions. If you are interested in Liberland citizenship, please use <a href="http://liberland.org/en/request/"><strong>citizenship application form</strong></a> and keep watching the information posted in the <a href="/en/news/"><strong>News section of this page</strong></a> and on our <a href="https://www.facebook.com/liberland"><strong>official Facebook page</strong></a>. Thank you all for your support and interest!</p>
+					</div>
+					
+					<h3>General contacts:</h3>
+					<table>
+						<thead>
+							<tr>
+					            <td>Contact name</td>
+					            <td>E-mail address</td>
+					            <td>Description</td>
+					        </tr>
+						</thead>
+					    <tbody>
+					        <tr>
+					            <td>General inquiries</td>
+					            <td><strong><a>secretary@liberland.org</a></strong></td>
+					            <td>General inquiries not included in other categories</td>
+					        </tr>
+					        <tr>
+					            <td>Department of Finance</td>
+					            <td><a><strong>finance@liberland.org</strong></a></td>
+					            <td>Donations, investments, crowdfunding and other issues related to finances</td>
+					        </tr>
+					        <tr>
+					            <td>Department of Foreign Affairs</td>
+					            <td><a><strong>foreign@liberland.org</strong></a></td>
+					            <td>Diplomacy, foreign relations, communication with other foreign offices,...</td>
+					        </tr>
+					        <tr>
+					            <td>Department of the Interior</td>
+					            <td><a><strong>interior@liberland.org</strong></a></td>
+					            <td>Organisational issues, settlement,...</td>
+					        </tr>
+					        <tr>
+					            <td>Department of Justice</td>
+					            <td><a><strong>justice@liberland.org</strong></a></td>
+					            <td>Legal issues, the Constitution, laws, human rights,...</td>
+					        </tr>
+					        <tr>
+					            <td>Web administration</td>
+					            <td><a><strong>webadmin@liberland.org</strong></a></td>
+					            <td>Issues with web pages Liberland.org and Fund.liberland.org</td>
+					        </tr>
+					        <tr>
+					            <td>Press Department</td>
+					            <td><a><strong>press@liberland.org</strong></a></td>
+					            <td>Interview requests, press releases, media relations,...</td>
+					        </tr>
+					    </tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="countries">
+		<div class="container">
+			<div class="row" id="sort_contacts">
 
-				<div class="col-sm-4">
-					<div class="panel panel-default" id="hr">
+				<div class="col-sm-4" id="hr">
+					<div class="panel panel-default">
 						<div class="panel-heading">
 					    	<h3 class="panel-title">CROATIA</h3>
 						</div>
@@ -183,8 +252,8 @@
 					</div>
 				</div>
 
-				<div class="col-sm-4">
-					<div class="panel panel-default" id="rs">
+				<div class="col-sm-4" id="rs">
+					<div class="panel panel-default">
 						<div class="panel-heading">
 					    	<h3 class="panel-title">SERBIA</h3>
 						</div>
@@ -201,8 +270,8 @@
 					</div>
 				</div>
 
-				<div class="col-sm-4">
-					<div class="panel panel-default" id="fr">
+				<div class="col-sm-4" id="fr">
+					<div class="panel panel-default">
 						<div class="panel-heading">
 					    	<h3 class="panel-title">FRANCE</h3>
 						</div>
@@ -216,25 +285,20 @@
 					</div>
 				</div>
 
-			</div>
-
-			<div class="row">
-
-				<div class="col-sm-4">
-					<div class="panel panel-default" id="no">
+				<div class="col-sm-4" id="no">
+					<div class="panel panel-default">
 						<div class="panel-heading">
 					    	<h3 class="panel-title">NORWAY</h3>
 						</div>
 						<div class="panel-body">
 					    	<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;
 					    	<a href="mailto:norway@liberland.org">norway@liberland.org</a><br/>
-							<span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>&nbsp;
 						</div>
 					</div>
 				</div>
 
-				<div class="col-sm-4">
-					<div class="panel panel-default" id="de">
+				<div class="col-sm-4" id="de">
+					<div class="panel panel-default">
 						<div class="panel-heading">
 					    	<h3 class="panel-title">GERMANY</h3>
 						</div>
@@ -247,8 +311,8 @@
 					</div>
 				</div>
 
-				<div class="col-sm-4">
-					<div class="panel panel-default" id="us">
+				<div class="col-sm-4" id="us">
+					<div class="panel panel-default">
 						<div class="panel-heading">
 					    	<h3 class="panel-title">The USA</h3>
 						</div>
@@ -261,12 +325,8 @@
 					</div>
 				</div>
 
-			</div>
-
-			<div class="row">
-
-				<div class="col-sm-4">
-					<div class="panel panel-default" id="hu">
+				<div class="col-sm-4" id="hu">
+					<div class="panel panel-default">
 						<div class="panel-heading">
 					    	<h3 class="panel-title">HUNGARY</h3>
 						</div>
@@ -279,8 +339,8 @@
 					</div>
 				</div>
 
-				<div class="col-sm-4">
-					<div class="panel panel-default" id="si">
+				<div class="col-sm-4" id="si">
+					<div class="panel panel-default">
 						<div class="panel-heading">
 					    	<h3 class="panel-title">SLOVENIA</h3>
 						</div>
@@ -296,8 +356,8 @@
 					</div>
 				</div>
 
-				<div class="col-sm-4">
-					<div class="panel panel-default" id="ve">
+				<div class="col-sm-4" id="ve">
+					<div class="panel panel-default">
 						<div class="panel-heading">
 					    	<h3 class="panel-title">VENEZUELA</h3>
 						</div>
@@ -310,13 +370,9 @@
 						</div>
 					</div>
 				</div>
-
-			</div>
-			
-			<div class="row">
 				
-				<div class="col-sm-4">
-					<div class="panel panel-default" id="#uk">
+				<div class="col-sm-4" id="uk">
+					<div class="panel panel-default">
 						<div class="panel-heading">
 					    	<h3 class="panel-title">The UNITED KINGDOM</h3>
 						</div>
@@ -329,8 +385,8 @@
 					</div>
 				</div>
 				
-				<div class="col-sm-4">
-					<div class="panel panel-default" id="#poland">
+				<div class="col-sm-4" id="pl">
+					<div class="panel panel-default">
 						<div class="panel-heading">
 					    	<h3 class="panel-title">POLAND</h3>
 						</div>
@@ -344,8 +400,8 @@
 					</div>
 				</div>
 				
-				<div class="col-sm-4">
-					<div class="panel panel-default" id="#panama">
+				<div class="col-sm-4" id="pa">
+					<div class="panel panel-default">
 						<div class="panel-heading">
 					    	<h3 class="panel-title">PANAMA</h3>
 						</div>
@@ -356,13 +412,9 @@
 						</div>
 					</div>
 				</div>
-								
-			</div>
-			
-			<div class="row">
 				
-				<div class="col-sm-4">
-					<div class="panel panel-default" id="#sweden">
+				<div class="col-sm-4" id="se">
+					<div class="panel panel-default">
 						<div class="panel-heading">
 					    	<h3 class="panel-title">SWEDEN</h3>
 						</div>
@@ -374,8 +426,8 @@
 					</div>
 				</div>
 				
-				<div class="col-sm-4">
-					<div class="panel panel-default" id="#oman">
+				<div class="col-sm-4" id="om">
+					<div class="panel panel-default">
 						<div class="panel-heading">
 					    	<h3 class="panel-title">OMAN</h3>
 						</div>
@@ -389,8 +441,8 @@
 					</div>
 				</div>
 				
-				<div class="col-sm-4">
-					<div class="panel panel-default" id="#lichtenstein">
+				<div class="col-sm-4" id="li">
+					<div class="panel panel-default">
 						<div class="panel-heading">
 					    	<h3 class="panel-title">LIECHTENSTEIN</h3>
 						</div>
@@ -401,13 +453,9 @@
 						</div>
 					</div>
 				</div>
-								
-			</div>
-			
-			<div class="row">
 				
-				<div class="col-sm-4">
-					<div class="panel panel-default" id="#brazil">
+				<div class="col-sm-4" id="br">
+					<div class="panel panel-default">
 						<div class="panel-heading">
 					    	<h3 class="panel-title">BRAZIL</h3>
 						</div>
@@ -421,8 +469,8 @@
 					</div>
 				</div>
 				
-				<div class="col-sm-4">
-					<div class="panel panel-default" id="#slovakia">
+				<div class="col-sm-4 id="sk"">
+					<div class="panel panel-default">
 						<div class="panel-heading">
 					    	<h3 class="panel-title">SLOVAKIA</h3>
 						</div>
@@ -436,8 +484,8 @@
 					</div>
 				</div>
 				
-				<div class="col-sm-4">
-					<div class="panel panel-default" id="#argentina">
+				<div class="col-sm-4" id="ar">
+					<div class="panel panel-default">
 						<div class="panel-heading">
 					    	<h3 class="panel-title">ARGENTINA</h3>
 						</div>
@@ -452,13 +500,9 @@
 						</div>
 					</div>
 				</div>
-								
-			</div>
-			
-			<div class="row">
 				
-				<div class="col-sm-4">
-					<div class="panel panel-default" id="#israel">
+				<div class="col-sm-4" id="il">
+					<div class="panel panel-default">
 						<div class="panel-heading">
 					    	<h3 class="panel-title">ISRAEL</h3>
 						</div>
@@ -469,8 +513,8 @@
 					</div>
 				</div>
 				
-				<div class="col-sm-4">
-					<div class="panel panel-default" id="#libya">
+				<div class="col-sm-4" id="ly">
+					<div class="panel panel-default">
 						<div class="panel-heading">
 					    	<h3 class="panel-title">LIBYA</h3>
 						</div>
@@ -484,8 +528,8 @@
 					</div>
 				</div>
 				
-				<div class="col-sm-4">
-					<div class="panel panel-default" id="#mexico">
+				<div class="col-sm-4" id="mx">
+					<div class="panel panel-default">
 						<div class="panel-heading">
 					    	<h3 class="panel-title">MEXICO</h3>
 						</div>
@@ -498,13 +542,9 @@
 						</div>
 					</div>
 				</div>
-								
-			</div>
-			
-			<div class="row">
 				
-				<div class="col-sm-4">
-					<div class="panel panel-default" id="#switzerland">
+				<div class="col-sm-4" id="ch">
+					<div class="panel panel-default" >
 						<div class="panel-heading">
 					    	<h3 class="panel-title">SWITZERLAND</h3>
 						</div>
@@ -520,8 +560,8 @@
 					</div>
 				</div>
 				
-				<div class="col-sm-4">
-					<div class="panel panel-default" id="#spain">
+				<div class="col-sm-4" id="es">
+					<div class="panel panel-default">
 						<div class="panel-heading">
 					    	<h3 class="panel-title">SPAIN</h3>
 						</div>
@@ -535,8 +575,8 @@
 					</div>
 				</div>
 				
-				<div class="col-sm-4">
-					<div class="panel panel-default" id="#netherland">
+				<div class="col-sm-4" id="nl">
+					<div class="panel panel-default">
 						<div class="panel-heading">
 					    	<h3 class="panel-title">NETHERLANDS</h3>
 						</div>
@@ -551,13 +591,9 @@
 						</div>
 					</div>
 				</div>
-								
-			</div>
-			
-			<div class="row">
 				
-				<div class="col-sm-4">
-					<div class="panel panel-default" id="#austria">
+				<div class="col-sm-4" id="at">
+					<div class="panel panel-default">
 						<div class="panel-heading">
 					    	<h3 class="panel-title">AUSTRIA</h3>
 						</div>
@@ -570,8 +606,8 @@
 					</div>
 				</div>
 				
-				<div class="col-sm-4">
-					<div class="panel panel-default" id="#denmark">
+				<div class="col-sm-4" id="dk">
+					<div class="panel panel-default">
 						<div class="panel-heading">
 					    	<h3 class="panel-title">DENMARK</h3>
 						</div>
@@ -583,8 +619,8 @@
 					</div>
 				</div>
 				
-				<div class="col-sm-4">
-					<div class="panel panel-default" id="#turkey">
+				<div class="col-sm-4" id="tr">
+					<div class="panel panel-default">
 						<div class="panel-heading">
 					    	<h3 class="panel-title">TURKEY</h3>
 						</div>
@@ -598,12 +634,10 @@
 					</div>
 				</div>
 								
-			</div>
-
-			<div class="row">
+			
 				
-				<div class="col-sm-4">
-					<div class="panel panel-default" id="#canada">
+				<div class="col-sm-4" id="ca">
+					<div class="panel panel-default">
 						<div class="panel-heading">
 					    	<h3 class="panel-title">CANADA</h3>
 						</div>
@@ -615,8 +649,8 @@
 					</div>
 				</div>
 				
-				<div class="col-sm-4">
-					<div class="panel panel-default" id="#guatemala">
+				<div class="col-sm-4" id="gt">
+					<div class="panel panel-default">
 						<div class="panel-heading">
 					    	<h3 class="panel-title">GUATEMALA</h3>
 						</div>
@@ -628,8 +662,8 @@
 					</div>
 				</div>
 				
-				<div class="col-sm-4">
-					<div class="panel panel-default" id="#egypt">
+				<div class="col-sm-4" id="eg">
+					<div class="panel panel-default">
 						<div class="panel-heading">
 					    	<h3 class="panel-title">EGYPT</h3>
 						</div>
@@ -639,14 +673,10 @@
 							<a href="mailto:egypt@liberland.org">egypt@liberland.org</a><br/>
 						</div>
 					</div>
-				</div>
-								
-			</div>
-
-			<div class="row">
+				</div>	
 				
-				<div class="col-sm-4">
-					<div class="panel panel-default" id="#japan">
+				<div class="col-sm-4" id="jp">
+					<div class="panel panel-default">
 						<div class="panel-heading">
 					    	<h3 class="panel-title">JAPAN</h3>
 						</div>
@@ -660,8 +690,8 @@
 					</div>
 				</div>
 				
-				<div class="col-sm-4">
-					<div class="panel panel-default" id="#chile">
+				<div class="col-sm-4" id="cl">
+					<div class="panel panel-default">
 						<div class="panel-heading">
 					    	<h3 class="panel-title">CHILE</h3>
 						</div>
@@ -673,8 +703,8 @@
 					</div>
 				</div>
 				
-				<div class="col-sm-4">
-					<div class="panel panel-default" id="#belgium">
+				<div class="col-sm-4" id="be">
+					<div class="panel panel-default">
 						<div class="panel-heading">
 					    	<h3 class="panel-title">BELGIUM</h3>
 						</div>
@@ -684,14 +714,10 @@
 							<a href="mailto:belgium@liberland.org">belgium@liberland.org</a><br/>
 						</div>
 					</div>
-				</div>
-								
-			</div>
-
-			<div class="row">
+				</div>	
 				
-				<div class="col-sm-4">
-					<div class="panel panel-default" id="#hongkong">
+				<div class="col-sm-4" id="hk">
+					<div class="panel panel-default">
 						<div class="panel-heading">
 					    	<h3 class="panel-title">HONG KONG</h3>
 						</div>
@@ -705,8 +731,8 @@
 					</div>
 				</div>
 				
-				<div class="col-sm-4">
-					<div class="panel panel-default" id="#southkorea">
+				<div class="col-sm-4" id="kr">
+					<div class="panel panel-default">
 						<div class="panel-heading">
 					    	<h3 class="panel-title">SOUTH KOREA</h3>
 						</div>
@@ -718,8 +744,8 @@
 					</div>
 				</div>
 				
-				<div class="col-sm-4">
-					<div class="panel panel-default" id="#taiwan">
+				<div class="col-sm-4" id="tw">
+					<div class="panel panel-default">
 						<div class="panel-heading">
 					    	<h3 class="panel-title">TAIWAN</h3>
 						</div>
@@ -730,13 +756,9 @@
 						</div>
 					</div>
 				</div>
-								
-			</div>
-
-			<div class="row">
 				
-				<div class="col-sm-4">
-					<div class="panel panel-default" id="#mongolia">
+				<div class="col-sm-4" id="mn">
+					<div class="panel panel-default">
 						<div class="panel-heading">
 					    	<h3 class="panel-title">MONGOLIA</h3>
 						</div>
@@ -748,8 +770,8 @@
 					</div>
 				</div>
 				
-				<div class="col-sm-4">
-					<div class="panel panel-default" id="#india">
+				<div class="col-sm-4" id="in">
+					<div class="panel panel-default">
 						<div class="panel-heading">
 					    	<h3 class="panel-title">INDIA</h3>
 						</div>
@@ -761,25 +783,9 @@
 					</div>
 				</div>
 				
-				<div class="col-sm-4">
-					<div class="panel panel-default" id="#austria">
-						<div class="panel-heading">
-					    	<h3 class="panel-title">AUSTRIA</h3>
-						</div>
-						<div class="panel-body">
-					    	<strong></strong><br/>
-					    	<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;
-							<a href="mailto:austria@liberland.org">austria@liberland.org</a><br/>
-						</div>
-					</div>
-				</div>
-								
-			</div>
-
-			<div class="row">
 				
-				<div class="col-sm-4">
-					<div class="panel panel-default" id="#bosnia">
+				<div class="col-sm-4" id="ba">
+					<div class="panel panel-default">
 						<div class="panel-heading">
 					    	<h3 class="panel-title">BOSNIA And HERZEGOVINA</h3>
 						</div>
@@ -791,8 +797,8 @@
 					</div>
 				</div>
 				
-				<div class="col-sm-4">
-					<div class="panel panel-default" id="#ukraine">
+				<div class="col-sm-4" id="ua">
+					<div class="panel panel-default">
 						<div class="panel-heading">
 					    	<h3 class="panel-title">UKRAINE</h3>
 						</div>
@@ -804,10 +810,8 @@
 					</div>
 				</div>
 				
-				
-				
-				<div class="col-sm-4">
-					<div class="panel panel-default" id="#thailand">
+				<div class="col-sm-4" id="th">
+					<div class="panel panel-default">
 						<div class="panel-heading">
 					    	<h3 class="panel-title">THAILAND</h3>
 						</div>
@@ -825,13 +829,9 @@
 						</div>
 					</div>
 				</div>
-								
-			</div>
-
-			<div class="row">
-				
-				<div class="col-sm-4">
-					<div class="panel panel-default" id="#china">
+						
+				<div class="col-sm-4" id="cn">
+					<div class="panel panel-default">
 						<div class="panel-heading">
 					    	<h3 class="panel-title">CHINA</h3>
 						</div>
@@ -843,8 +843,8 @@
 					</div>
 				</div>
 				
-				<div class="col-sm-4">
-					<div class="panel panel-default" id="#bangladesh">
+				<div class="col-sm-4" id="bd">
+					<div class="panel panel-default">
 						<div class="panel-heading">
 					    	<h3 class="panel-title">BANGLADESH</h3>
 						</div>
@@ -862,8 +862,8 @@
 					</div>
 				</div>
 				
-				<div class="col-sm-4">
-					<div class="panel panel-default" id="#ecuador">
+				<div class="col-sm-4" id="ec">
+					<div class="panel panel-default">
 						<div class="panel-heading">
 					    	<h3 class="panel-title">ECUADOR</h3>
 						</div>
@@ -874,13 +874,9 @@
 						</div>
 					</div>
 				</div>
-								
-			</div>
-			
-			<div class="row">
 				
-				<div class="col-sm-4">
-					<div class="panel panel-default" id="#macedonia">
+				<div class="col-sm-4" id="mk">
+					<div class="panel panel-default">
 						<div class="panel-heading">
 					    	<h3 class="panel-title">MACEDONIA</h3>
 						</div>
@@ -892,8 +888,8 @@
 					</div>
 				</div>
 				
-				<div class="col-sm-4">
-					<div class="panel panel-default" id="#vietnam">
+				<div class="col-sm-4" id="vn">
+					<div class="panel panel-default">
 						<div class="panel-heading">
 					    	<h3 class="panel-title">VIETNAM</h3>
 						</div>
@@ -905,8 +901,8 @@
 					</div>
 				</div>
 			
-				<div class="col-sm-4">
-					<div class="panel panel-default" id="#georgia">
+				<div class="col-sm-4" id="ge">
+					<div class="panel panel-default">
 						<div class="panel-heading">
 					    	<h3 class="panel-title">GEORGIA</h3>
 						</div>
@@ -917,13 +913,9 @@
 						</div>
 					</div>
 				</div>
-								
-			</div>
-			
-			<div class="row">
 				
-				<div class="col-sm-4">
-					<div class="panel panel-default" id="#pakistan">
+				<div class="col-sm-4" id="pk">
+					<div class="panel panel-default">
 						<div class="panel-heading">
 					    	<h3 class="panel-title">PAKISTAN</h3>
 						</div>
@@ -941,8 +933,8 @@
 					</div>
 				</div>
 				
-				<div class="col-sm-4">
-					<div class="panel panel-default" id="#russia">
+				<div class="col-sm-4" id="ru">
+					<div class="panel panel-default">
 						<div class="panel-heading">
 					    	<h3 class="panel-title">RUSSIA</h3>
 						</div>
@@ -953,9 +945,8 @@
 						</div>
 					</div>
 				</div>
-								
+
 			</div>
-			
 		</div>
 	</section>
 	<footer>

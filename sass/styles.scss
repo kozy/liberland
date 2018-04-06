@@ -563,7 +563,7 @@ body {
 	}
 	&.lc{
 		header {
-			background: #646462;
+			background: $gray-m;
 			background-position: 70% bottom;
 			background-size: cover;
 			height: auto;
@@ -595,6 +595,57 @@ body {
 				li{
 					margin-bottom: 25px;
 				}
+			}
+		}
+	}
+	&.contact {
+		background: $gray-m;
+		
+		#general {
+			background: white;
+			.alert-primary {
+				border: 3px solid $yellow;
+				background: rgba($yellow,.25);
+				padding: 30px;	
+			}
+			table {
+				width: 100%;
+				
+				thead {
+					background: $yellow;
+					font-weight: bold;
+				}
+				tr {
+					background: rgba($gray-l,.35);
+					&:nth-child(odd) {
+						background: rgba($gray-l,0);
+					}
+					td{
+						padding: 3px;
+						display: block;
+						width: 50%;
+						&:last-child {
+							width: 100%;
+						}
+						@include breakpoint(md) {
+							display: table-cell;
+							width: 20%;
+						}
+					}
+					
+				}
+			}
+		}
+		.panel {
+			border: none;
+			margin-bottom: 30px;
+			.panel-heading {
+				border-radius: 0;
+				border: none;
+				background: $yellow;
+			}
+			.panel-body {
+				height: 170px;
 			}
 		}
 	}
