@@ -250,16 +250,18 @@ body.landing #what-headline {
     margin: 0; }
 
 body.landing #what {
+  position: relative;
   padding: 0; }
   body.landing #what #gmap {
     height: 100vh; }
   body.landing #what #overmap {
-    height: 100vh;
-    margin-top: -100vh;
-    position: relative; }
+    position: absolute;
+    bottom: 1vh;
+    right: 6vh; }
     body.landing #what #overmap .to-bottom {
       position: absolute;
       bottom: 0;
+      right: 10px;
       left: 10px;
       right: 10px; }
 
@@ -349,11 +351,7 @@ body.landing #partners {
         width: 100%;
         max-width: 100px;
         -webkit-filter: grayscale(100%);
-        filter: grayscale(100%);
-        margin-bottom: 10px; }
-      body.landing #partners .container a:hover img {
-        -webkit-filter: grayscale(0%);
-        filter: grayscale(0%); }
+        filter: grayscale(100%); }
 
 body.landing #news h3 {
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(39%, #FFCB05), color-stop(40%, white), color-stop(60%, white), color-stop(61%, #FFCB05));

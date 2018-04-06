@@ -26,19 +26,19 @@ $dark-blue: #13111f;
   @if $class == xs {
     @media (max-width: 767px) { @content; }
   }
- 
+
   @else if $class == sm {
     @media (min-width: 768px) { @content; }
   }
- 
+
   @else if $class == md {
     @media (min-width: 992px) { @content; }
   }
- 
+
   @else if $class == lg {
     @media (min-width: 1200px) { @content; }
   }
- 
+
   @else {
     @warn "Breakpoint mixin supports: xs, sm, md, lg";
   }
@@ -51,7 +51,7 @@ $dark-blue: #13111f;
     background-size: 6px 6px;
     background-color: white;
     background-image: linear-gradient($angle,
-                      white 45%, rgba($color,.25) 46%, 
+                      white 45%, rgba($color,.25) 46%,
                       rgba($color,.25) 54%, white 55%);
 }
 
@@ -125,12 +125,12 @@ a {
 }
 
 button, a[class^="btn"] {
-    
+
     text-transform: uppercase;
     //font-size: 24px;
     //padding: 25px 30px;
     border-radius: 3px;
-    
+
     transition: all .5s;
     &.btn-more {
 	    color: $gray-d;
@@ -155,7 +155,7 @@ button, a[class^="btn"] {
     }
 }
 .btn-ellipsis {
-	
+
 }
 
 .figures {
@@ -186,10 +186,10 @@ nav.navbar {
 	border-radius: 0;
 	border: none;
 	background: linear-gradient(to bottom, $yellow 39%,black 40%,black 60%,$yellow 61%);
-	
+
 	a.navbar-brand {
 		    padding: 10px 15px;
-		    
+
 		    &:hover {
 				background: none;
 				box-shadow: none;
@@ -205,7 +205,7 @@ nav.navbar {
 		.icon-bar {
 			background: $yellow;
 		}
-		
+
 	}
 	ul.nav.navbar-nav {
 		list-style-type: none;
@@ -229,7 +229,7 @@ nav.navbar {
 			}
 			&.active {
 				//background: black;
-				a{ 
+				a{
 					background: black;
 					color: $yellow;
 					box-shadow: inset 0 0 0px 5px $yellow;
@@ -255,7 +255,7 @@ body {
 				margin: 80px 0px 0px;
 			}
 		}
-		
+
 	}
 	section{
 		padding: 50px 0;
@@ -290,7 +290,7 @@ body {
 		color: white;
 		padding: 50px 0 30px;
 		border-top: 5px solid $yellow;
-		
+
 		ul {
 			list-style-type: none;
 			padding-left: 0;
@@ -301,7 +301,7 @@ body {
 				}
 			}
 		}
-		a{ 
+		a{
 			color: $yellow;
 			&:hover {
 				color: white;
@@ -319,7 +319,7 @@ body {
 				color: $gray-l;
 				opacity: .3;
 			}
-			&:focus { 
+			&:focus {
 			    background-color: $gray-l;
 			    border: 3px solid $yellow;
 				border-right: none;
@@ -331,7 +331,7 @@ body {
 	}
 	&.landing{
 		header {
-			
+
  			background: $gray-m url(../images/hero.svg) center center no-repeat;
 			background-size: cover;
 			height: 100vh;
@@ -350,7 +350,6 @@ body {
 				    width: 100%;
 				}
 			}
-			
 		}
 		#what-headline {
 			background: url(../images/wave.svg) center top;
@@ -362,18 +361,22 @@ body {
 			}
 		}
 		#what {
-			
+			position: relative;
+
 				padding: 0;
 			#gmap {
 				height: 100vh;
 			}
 			#overmap {
-				height: 100vh;
-				margin-top: -100vh;
-				position: relative;
+				position: absolute;
+				bottom: 1vh;
+				right: 6vh;
+
 				.to-bottom {
 					position: absolute;
 					bottom: 0;
+					right: 10px;
+
 				    left: 10px;
 				    right: 10px;
 				}
@@ -403,16 +406,16 @@ body {
 				&.pass{
 					.img-holder{ background-image: url(../images/icon-pass.svg) }
 					&:hover .img-holder{ background-image: url(../images/icon-car-animated.svg) }
-				} 
+				}
 				&.comp{
 					.img-holder{ background-image: url(../images/icon-comp.svg) }
 					&:hover .img-holder{ background-image: url(../images/icon-comp-animated.svg) }
-				} 
+				}
 				&.car{
 					.img-holder{ background-image: url(../images/icon-car.svg) }
 					&:hover .img-holder{ background-image: url(../images/icon-car-animated.svg) }
-				} 
-				
+				}
+
 			}
 		}
 		#government {
@@ -433,7 +436,7 @@ body {
 				padding-bottom: 20px;
 			}
 			a{
-				
+
 				div.circ {
 					width: 210px;
 					height: 210px;
@@ -442,8 +445,8 @@ body {
 					img {
 						width: 200px;
 						height: 200px;
-						
-						filter: grayscale(100%) 
+
+						filter: grayscale(100%)
 								brightness(135%)
 								contrast(120%);
 						transition: all .25s;
@@ -453,7 +456,7 @@ body {
 					color: white;
 					transition: all .25s;
 				}
-				
+
 				&:hover {
 					div.circ {
 						img {
@@ -481,11 +484,7 @@ body {
 						width: 100%;
 						max-width: 100px;
 						filter: grayscale(100%);
-						margin-bottom: 10px;
 					}
-					 &:hover img {
-					    filter: grayscale(0%);
-				    }
 				}
 			}
 		}
@@ -499,7 +498,7 @@ body {
 				img {
 					width: 100%;
 					filter: grayscale(100%);
-					
+
 				}
 				color: $gray-d;
 				&:hover{
@@ -507,10 +506,10 @@ body {
 					img {filter: grayscale(0%);}
 				}
 			}
-			
+
 		}
 		#media {
-			a{ 
+			a{
 				box-shadow: none;
 				img {
 				    transition: all 200ms ease-in-out;
@@ -524,9 +523,9 @@ body {
 			    }
 			}
 		}
-		
+
 	}
-	
+
 	&.aboutll {
 		header {
 			background: #646462 url(../images/about-hero.jpg);
@@ -535,7 +534,7 @@ body {
 			height: 100vh;
 			max-height: 200vw;
 			color: white;
-			
+
 			h1 {
 				margin-top: 0;
 				text-shadow: 9px 7px 2px rgba(black,.03),-7px 9px 2px rgba(black,.03),-7px -7px 2px rgba(black,.03),7px -7px 2px rgba(black,.06);
@@ -569,14 +568,14 @@ body {
 			background-size: cover;
 			height: auto;
 			color: white;
-			
+
 			h1 {
 				margin-top: 0;
 				margin-bottom: 50px;
 				text-shadow: 9px 7px 2px rgba(black,.03),-7px 9px 2px rgba(black,.03),-7px -7px 2px rgba(black,.03),7px -7px 2px rgba(black,.06);
 			}
 			h2 { margin-top: 50px}
-			
+
 			@include breakpoint(md){
 				//height: 80vh;
 				background-position: right top;
@@ -589,7 +588,7 @@ body {
 			p { font-size: large }
 		}
 		#constitution {
-			
+
 		}
 		#donations {
 			ul{
