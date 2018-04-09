@@ -189,7 +189,7 @@ button, a[class^="btn"] {
 
 .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
 	color: #000;
-	background-color: transparent;
+	background-color: $yellow;
 }
 
 nav.navbar {
@@ -384,20 +384,20 @@ body {
 			#gmap {
 				height: 100vh;
 			}
-			#overmap {
-				position: absolute;
-				bottom: 1vh;
-				right: 6vh;
 
+			#overmap {
+				height: 100vh;
+				margin-top: -100vh;
+				position: relative;
+				pointer-events: none;
 				.to-bottom {
 					position: absolute;
 					bottom: 0;
-					right: 10px;
-
 				    left: 10px;
 				    right: 10px;
 				}
 			}
+
 		}
 		#mission {
 			background: $yellow url(../images/mission.svg) center bottom  no-repeat;

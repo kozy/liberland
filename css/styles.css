@@ -100,7 +100,7 @@ button, a[class^="btn"] {
 
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:focus, .navbar-default .navbar-nav > .open > a:hover {
   color: #000;
-  background-color: transparent; }
+  background-color: #FFCB05; }
 
 nav.navbar {
   border-radius: 0;
@@ -265,13 +265,13 @@ body.landing #what {
   body.landing #what #gmap {
     height: 100vh; }
   body.landing #what #overmap {
-    position: absolute;
-    bottom: 1vh;
-    right: 6vh; }
+    height: 100vh;
+    margin-top: -100vh;
+    position: relative;
+    pointer-events: none; }
     body.landing #what #overmap .to-bottom {
       position: absolute;
       bottom: 0;
-      right: 10px;
       left: 10px;
       right: 10px; }
 
