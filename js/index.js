@@ -470,12 +470,7 @@ var initmain = function(){
 			]
 		};
 
-		map = new google.maps.Map(document.getElementById('gmap'),		{
-    zoom: 13,
-    center: {lat: 45.767156, lng: 18.866622},
-    mapTypeId: 'terrain'
-  });
-
+		map = new google.maps.Map(document.getElementById('gmap'), mapOptions);
 		var llSurface = [
 			{ lat: 45.78381, lng: 18.86962 },
 			{ lat: 45.77968, lng: 18.86105 },
@@ -504,13 +499,15 @@ var initmain = function(){
 			strokeColor: '#FFCB05',
 			strokeOpacity: 0.95,
 			strokeWeight: 2,
-			fillColor: '#FF0000',
+			fillColor: '#FFCB05',
 			fillOpacity: 0.35
 		});
 		surface.setMap(map);
 	}
 
 	google.maps.event.addDomListener(window, 'load', showGoogleMaps);
+
+
 
 	// count up
 	var options = {
