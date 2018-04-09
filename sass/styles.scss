@@ -324,11 +324,12 @@ body {
 			}
 		}
 		input {
-			border: 3px solid $yellow;
+			border: 3px solid $yellow !important;
 			border-right: none;
 			border-radius: 3px;
 			padding: 6px 10px;
-			height: auto;
+			height: 38px !important;
+			border-right: none !important;
 			background: $gray-m;
 			color: $gray-l;
 			&::placeholder {
@@ -525,6 +526,9 @@ body {
 
 		}
 		#media {
+			.col-sm-3.col-xs-4 {
+				height: 120px
+			}
 			a{
 				box-shadow: none;
 				img {
@@ -640,12 +644,22 @@ body {
 						padding: 3px;
 						display: block;
 						width: 50%;
+						float: left;
+						
+						&:nth-child(2) {
+							text-align: right;
+						}
+
 						&:last-child {
 							width: 100%;
 						}
 						@include breakpoint(md) {
 							display: table-cell;
 							width: 20%;
+							float: none;
+							&:nth-child(2) {
+								text-align: left;
+							}
 						}
 					}
 					

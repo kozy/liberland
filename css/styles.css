@@ -204,11 +204,12 @@ body > footer {
     body > footer a:hover {
       color: white; }
   body > footer input {
-    border: 3px solid #FFCB05;
+    border: 3px solid #FFCB05 !important;
     border-right: none;
     border-radius: 3px;
     padding: 6px 10px;
-    height: auto;
+    height: 38px !important;
+    border-right: none !important;
     background: #555658;
     color: #d0d8de; }
     body > footer input::-webkit-input-placeholder {
@@ -381,6 +382,9 @@ body.landing #news a {
       -webkit-filter: grayscale(0%);
       filter: grayscale(0%); }
 
+body.landing #media .col-sm-3.col-xs-4 {
+  height: 120px; }
+
 body.landing #media a {
   -webkit-box-shadow: none;
   box-shadow: none; }
@@ -467,13 +471,19 @@ body.contact {
         body.contact #general table tr td {
           padding: 3px;
           display: block;
-          width: 50%; }
+          width: 50%;
+          float: left; }
+          body.contact #general table tr td:nth-child(2) {
+            text-align: right; }
           body.contact #general table tr td:last-child {
             width: 100%; }
           @media (min-width: 992px) {
             body.contact #general table tr td {
               display: table-cell;
-              width: 20%; } }
+              width: 20%;
+              float: none; }
+              body.contact #general table tr td:nth-child(2) {
+                text-align: left; } }
   body.contact .panel {
     border: none;
     margin-bottom: 30px; }

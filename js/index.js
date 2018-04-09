@@ -520,8 +520,8 @@ var initmain = function(){
 		decimal: '.',
 	};
 
-	var citizenships_num = 400,
-	companies_num = 40,
+	var citizenships_num = 500,
+	companies_num = 65,
 	offices_num = 95;
 
 	var citizenships = new CountUp('citizenships', 0, citizenships_num, 0, 1.5, options);
