@@ -608,7 +608,16 @@ body {
 			p { font-size: large }
 		}
 		#constitution {
-
+/*
+			.container {
+				    max-width: 880px;
+			}
+*/
+			ul{
+				li{
+					margin-bottom: 15px;
+				}
+			}
 		}
 		#donations {
 			ul{

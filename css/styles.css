@@ -448,6 +448,15 @@ body.lc header {
 body.lc #laws p {
   font-size: large; }
 
+body.lc #constitution {
+  /*
+			.container {
+				    max-width: 880px;
+			}
+*/ }
+  body.lc #constitution ul li {
+    margin-bottom: 15px; }
+
 body.lc #donations ul li {
   margin-bottom: 25px; }
 
