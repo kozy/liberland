@@ -54,7 +54,7 @@ a {
 
 .to-bottom {
   position: absolute;
-  bottom: 17%;
+  bottom: 12%;
   left: 0;
   right: 0; }
 
@@ -521,7 +521,8 @@ body.ico #intro {
   -webkit-box-shadow: inset 0 0 70px rgba(0, 0, 0, 0.35);
   box-shadow: inset 0 0 70px rgba(0, 0, 0, 0.35); }
   body.ico #intro .container {
-    height: 100%; }
+    height: 100%;
+    padding-top: 10%; }
 
 .wait1 {
   -webkit-animation-delay: 0.25s;
