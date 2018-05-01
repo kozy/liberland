@@ -423,6 +423,122 @@
 			}
 		
 			google.maps.event.addDomListener(window, 'load', showGoogleMaps);
+			
+			
+			
+			
+			// particles
+			particlesJS("particles-js", {
+				"particles": {
+					"number": {
+						"value": 80,
+						"density": {
+							"enable": true,
+							"value_area": 800
+						}
+					},
+					"color": {
+						"value": "#555"
+					},
+					"shape": {
+						"type": "circle",
+						"stroke": {
+							"width": 0,
+							"color": "#000000"
+						},
+						"polygon": {
+							"nb_sides": 3
+						},
+						"image": {
+							"src": "img/github.svg",
+							"width": 170,
+							"height": 100
+						}
+					},
+					"opacity": {
+						"value": 1,
+						"random": false,
+						"anim": {
+							"enable": false,
+							"speed": 1,
+							"opacity_min": 0.1,
+							"sync": false
+						}
+					},
+					"size": {
+						"value": 15,
+						"random": true,
+						"anim": {
+							"enable": false,
+							"speed": 40,
+							"size_min": 0.1,
+							"sync": false
+						}
+					},
+					"line_linked": {
+						"enable": true,
+						"distance": 200,
+						"color": "#ffffff",
+						"opacity": 0.2,
+						"width": 2
+					},
+					"move": {
+						"enable": true,
+						"speed": 1.3,
+						"direction": "none",
+						"random": true,
+						"straight": false,
+						"out_mode": "out",
+						"bounce": false,
+						"attract": {
+							"enable": false,
+							"rotateX": 600,
+							"rotateY": 1200
+						}
+					}
+				},
+				"interactivity": {
+					"detect_on": "canvas",
+					"events": {
+						"onhover": {
+							"enable": false,
+							"mode": "repulse"
+						},
+						"onclick": {
+							"enable": false,
+							"mode": "push"
+						},
+						"resize": true
+					},
+					"modes": {
+						"grab": {
+							"distance": 400,
+							"line_linked": {
+								"opacity": 1
+							}
+						},
+						"bubble": {
+							"distance": 400,
+							"size": 40,
+							"duration": 2,
+							"opacity": 8,
+							"speed": 3
+						},
+						"repulse": {
+							"distance": 200,
+							"duration": 0.4
+						},
+						"push": {
+							"particles_nb": 4
+						},
+						"remove": {
+							"particles_nb": 2
+						}
+					}
+				},
+				"retina_detect": true
+			});
+
 		});
 		
 	</script>
@@ -434,10 +550,33 @@
 <header>
   <div id="title" class="container">
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-sm-4">
         
         <h1 class="text-left">Liberland</h1>
         <h2>Chamber of Commerce</h2>
+      </div>
+      <div class="col-sm-8">
+	      <nav class="navbar navbar-default coc">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					</button>
+				</div>
+				<div id="navbar" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li class="active"><a href="coc-about.html">About</a></li>
+						<li><a href="coc-liberland.html">Liberland</a></li>
+						<li><a href="coc-members.html">Memebers</a></li>
+						<li><a href="coc-events.html">Events</a></li>
+						<li><a href="coc-contact.html">Contact</a></li>
+					</ul>
+				</div>	<!--/.nav-collapse -->
+			</div>	<!--/.container-fluid -->
+		</nav>
       </div>
     </div>
   </div>
@@ -449,18 +588,16 @@
 <section id="general">
 	<div id="gmap"></div>
 
-	<div id="overmap" class="container wow fadeInRight">
+	<div id="overmap" class="container">
 		<div class="row">
-			<div class="col-md-12 text-right">
+			<div class="col-md-8 col-md-push-4 text-right wow fadeInRight">
 				<h3>General Info</h3>
 			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-4">
+			<div class="col-md-4 col-md-pull-8">
 				<div class="panel panel-default">
-					<div class="panel-body">
+					<div class="panel-body text-center">
+						<img width="150" height="150" src="images/coc/Flag.svg">
 						<p class="subtitle">Free Republic of Liberland is the newest sovereign country on earth with territory 3x larger than Monaco and 100k+ future citizens</p>
-						
 						<div class="text-center"><a href="/about/liberland/" class="btn btn-more">Learn More</a></div>
 					</div>
 				</div>
@@ -469,9 +606,9 @@
 		<div class="row to-middle">
 			<div class="col-md-4 col-md-offset-8">
 				<div class="panel panel-default">
-					<div class="panel-body">
+					<div class="panel-body text-center">
+						<img width="150" height="150" src="images/coc/Location.svg">
 						<p class="subtitle">Located on Danube river between Serbia, Croatia and 20 km from Hungary</p>
-						
 						<div class="text-center"><a href="/about/liberland/" class="btn btn-more">Learn More</a></div>
 					</div>
 				</div>
@@ -480,9 +617,9 @@
 		<div class="row to-bottom">
 			<div class="col-md-4">
 				<div class="panel panel-default">
-					<div class="panel-body">
+					<div class="panel-body text-center">
+						<img width="150" height="150" src="images/coc/Key.svg">
 						<p class="subtitle">Chamber of Commerce is the main door to unlock business potential of Free Republic of Liberland</p>
-						
 						<div class="text-center"><a href="/about/liberland/" class="btn btn-more">Learn More</a></div>
 					</div>
 				</div>
@@ -527,22 +664,27 @@
     </div>
     <div class="row text-center">
       <div class="col-md-3 wow fadeInUp">
-	  	Large/Small/medium companies and individuals doing business anywhere in the world <a href="#">more</a>
+	    <img width="150" height="150" src="images/coc/placeholder.svg">
+	  	<p>Large/Small/medium companies and individuals doing business anywhere in the world</p> <a href="#" class="btn btn-more">Learn More</a>
       </div>
       <div class="col-md-3 wow wait1 fadeInUp">
-	    Willing to do business with other Liberland-related companies <a href="#">more</a>
+	    <img width="150" height="150" src="images/coc/placeholder.svg">
+	    <p>Willing to do business with other Liberland-related companies</p> <a href="#" class="btn btn-more">Learn More</a>
       </div>
       <div class="col-md-3 wow fadeInUp">
-	    May, but don’t have to be registered in Liberland <a href="#">more</a>
+	    <img width="150" height="150" src="images/coc/placeholder.svg">
+	    <p>May, but don’t have to be registered in Liberland</p> <a href="#" class="btn btn-more">Learn More</a>
       </div>
       <div class="col-md-3 wow fadeInUp">
-	    No restrictions on industry, company size or turnover <a href="#">more</a>
+	  	<img width="150" height="150" src="images/coc/placeholder.svg">
+	    <p>No restrictions on industry, company size or turnover</p> <a href="#" class="btn btn-more">Learn More</a>
       </div>
     </div>
   </div>
 </section>
 
-<section id="" class="bg-dark">
+<section id="why" class="bg-dark">
+	<div id="particles-js"></div>
   <div class="container">
 	  <div class="row text-center">
       <div class="col-md-12 wow fadeInUp">
@@ -551,19 +693,24 @@
     </div>
     <div class="row text-center">
       <div class="col-lg-2 col-sm-6 col-lg-offset-1 wow fadeInUp">
-	  	Be a part of newly created economic ecosystem with global reach <a href="#">more</a>
+	      <img width="150" height="150" src="images/coc/placeholder.svg">
+	  	<p>Be a part of newly created economic ecosystem with global reach</p> <a href="#" class="btn btn-more">Learn More</a>
       </div>
       <div class="col-lg-2 col-sm-6 wow wait1 fadeInUp">
-	    Business connections, customers, new markets, publicity <a href="#">more</a>
+	      <img width="150" height="150" src="images/coc/placeholder.svg">
+	    <p>Business connections, customers, new markets, publicity</p> <a href="#" class="btn btn-more">Learn More</a>
       </div>
       <div class="col-lg-2 col-sm-6  wow fadeInUp">
-	    Liberland has attracted enormous business interest from all industries and companies all around the world  <a href="#">more</a>
+	      <img width="150" height="150" src="images/coc/placeholder.svg">
+	    <p>Liberland has attracted enormous business interest from all industries and companies all around the world</p>  <a href="#" class="btn btn-more">Learn More</a>
       </div>
       <div class="col-lg-2 col-sm-6  wow fadeInUp">
-	    Main interest from blockchain, cryptocurrencies and digital economy, as well as future territory developers - energy, infrastructure, utilities, healthcare, hospitality, commerce and other sectors <a href="#">more</a>
+	      <img width="150" height="150" src="images/coc/placeholder.svg">
+	    <p>Main interest from blockchain, cryptocurrencies and digital economy, as well as future territory developers - energy, infrastructure, utilities, healthcare, hospitality, commerce and other sectors</p> <a href="#" class="btn btn-more">Learn More</a>
       </div>
       <div class="col-lg-2 col-sm-12  wow fadeInUp">
-	    Media, strategic partners <a href="#">more</a>
+	      <img width="150" height="150" src="images/coc/placeholder.svg">
+	    <p>Media, strategic partners</p> <a href="#" class="btn btn-more">Learn More</a>
       </div>
     </div>
   </div>
@@ -578,13 +725,16 @@
     </div>
     <div class="row text-center">
       <div class="col-md-4 wow fadeInUp">
-	  	Apply for membership in the Chamber of Commerce <a href="#">more</a>
+	      <img width="150" height="150" src="images/coc/placeholder.svg">
+	  	<p>Apply for membership in the Chamber of Commerce</p> <a href="#" class="btn btn-more">Learn More</a>
       </div>
       <div class="col-md-4 wow wait1 fadeInUp">
-	    Move  or expand your current business production to free trade zone Apatin <a href="#">more</a>
+	      <img width="150" height="150" src="images/coc/placeholder.svg">
+	    <p>Move  or expand your current business production to free trade zone Apatin</p> <a href="#" class="btn btn-more">Learn More</a>
       </div>
       <div class="col-md-4 wow fadeInUp">
-	    Open your company in Liberland jurisdiction with voluntary corporate tax <a href="#">more</a>
+	      <img width="150" height="150" src="images/coc/placeholder.svg">
+	    <p>Open your company in Liberland jurisdiction with voluntary corporate tax</p> <a href="#" class="btn btn-more">Learn More</a>
       </div>
     </div>
   </div>

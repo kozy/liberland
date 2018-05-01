@@ -7,12 +7,13 @@
 @import url('https://fonts.googleapis.com/css?family=Andada');
 
 
-
+$sans: "Helvetica", sans-serif;
+$slab:  'Alfa Slab One', serif;
 $yellow: #FFCB05;
 $yellow-d: #F1C823;
 $gray-d: #35373A;
 $gray-m: #555658;
-$gray-l: #d0d8de;
+$gray-l: #e4e3e4; //#d0d8de;
 
 $dark-blue: #13111f;
 
@@ -71,7 +72,7 @@ $time: .25s;
 
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: 'Alfa Slab One', serif;
+	font-family: $slab;
 	//font-family: 'Andada', serif;
 }
 h1 {
@@ -80,7 +81,7 @@ h1 {
 }
 h2 {
 	color: white;
-	font-family: sans-serif;
+	font-family: $sans;
 	font-size: 20px;
     margin: 5px 0;
     text-shadow: 0 0 20px rgba(black,.5);

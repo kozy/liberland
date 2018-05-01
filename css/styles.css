@@ -5,7 +5,7 @@
   color: red !important; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Alfa Slab One', serif; }
+  font-family: "Alfa Slab One", serif; }
 
 h1 {
   color: #FFCB05 !important;
@@ -13,7 +13,7 @@ h1 {
 
 h2 {
   color: white;
-  font-family: sans-serif;
+  font-family: "Helvetica", sans-serif;
   font-size: 20px;
   margin: 5px 0;
   text-shadow: 0 0 20px rgba(0, 0, 0, 0.5); }
@@ -35,7 +35,7 @@ h5 {
 
 hr {
   border: none;
-  border-top: 1px solid #d0d8de; }
+  border-top: 1px solid #e4e3e4; }
 
 a {
   -webkit-box-shadow: inset 0 -2px 0 #FFCB05;
@@ -239,21 +239,21 @@ body > footer {
     padding: 6px 10px;
     height: 38px !important;
     background: #555658;
-    color: #d0d8de; }
+    color: #e4e3e4; }
     body > footer input::-webkit-input-placeholder {
-      color: #d0d8de;
+      color: #e4e3e4;
       opacity: .3; }
     body > footer input:-ms-input-placeholder {
-      color: #d0d8de;
+      color: #e4e3e4;
       opacity: .3; }
     body > footer input::-ms-input-placeholder {
-      color: #d0d8de;
+      color: #e4e3e4;
       opacity: .3; }
     body > footer input::placeholder {
-      color: #d0d8de;
+      color: #e4e3e4;
       opacity: .3; }
     body > footer input:focus {
-      background-color: #d0d8de;
+      background-color: #e4e3e4;
       border: 3px solid #FFCB05;
       border-right: none;
       outline: #FFCB05;
@@ -471,9 +471,9 @@ body.contact {
         background: #FFCB05;
         font-weight: bold; }
       body.contact #general table tr {
-        background: rgba(208, 216, 222, 0.35); }
+        background: rgba(228, 227, 228, 0.35); }
         body.contact #general table tr:nth-child(odd) {
-          background: rgba(208, 216, 222, 0); }
+          background: rgba(228, 227, 228, 0); }
         body.contact #general table tr td {
           padding: 3px;
           display: block;
@@ -578,34 +578,83 @@ body.coc header {
     background: #FFCB05 url(/images/header-bg.png) repeat-x;
     background-size: contain; }
 
+body.coc nav.coc {
+  background: transparent;
+  position: relative;
+  z-index: 100;
+  margin-top: -62px; }
+  @media (min-width: 768px) {
+    body.coc nav.coc {
+      margin-top: 92px; } }
+  body.coc nav.coc button.navbar-toggle {
+    background: white;
+    border: none; }
+    body.coc nav.coc button.navbar-toggle span {
+      color: #555658; }
+  body.coc nav.coc ul.nav.navbar-nav.navbar-right li {
+    background: none;
+    margin: 0; }
+    body.coc nav.coc ul.nav.navbar-nav.navbar-right li.active {
+      background: #FFCB05; }
+      body.coc nav.coc ul.nav.navbar-nav.navbar-right li.active a {
+        background: none; }
+    body.coc nav.coc ul.nav.navbar-nav.navbar-right li a {
+      color: #555658;
+      background: none;
+      font-family: "Helvetica", sans-serif;
+      font-size: 20px;
+      padding: 15px 5px; }
+
 body.coc section#general {
   position: relative;
   padding: 0; }
   body.coc section#general #gmap {
     height: 100vh; }
   body.coc section#general #overmap {
-    height: 100vh;
-    margin-top: -100vh;
-    position: relative;
-    pointer-events: none; }
-    body.coc section#general #overmap .to-bottom {
-      position: absolute;
-      bottom: 0;
-      left: 15px;
-      right: 15px; }
-      body.coc section#general #overmap .to-bottom .panel {
-        pointer-events: auto; }
-    body.coc section#general #overmap .to-middle {
-      position: absolute;
-      bottom: 50%;
-      -webkit-transform: translateY(50%);
-      transform: translateY(50%);
-      left: 15px;
-      right: 15px; }
-      body.coc section#general #overmap .to-middle .panel {
-        pointer-events: auto; }
+    height: auto;
+    background: #e4e3e4;
+    margin-top: 0px;
+    padding-top: 40px; }
+    @media (min-width: 768px) {
+      body.coc section#general #overmap {
+        height: 98vh;
+        margin-top: -98vh;
+        background: transparent;
+        position: relative;
+        pointer-events: none; }
+        body.coc section#general #overmap .to-bottom {
+          position: absolute;
+          bottom: 0;
+          left: 15px;
+          right: 15px; }
+          body.coc section#general #overmap .to-bottom .panel {
+            pointer-events: auto; }
+        body.coc section#general #overmap .to-middle {
+          position: absolute;
+          bottom: 50%;
+          -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+          left: 15px;
+          right: 15px; }
+          body.coc section#general #overmap .to-middle .panel {
+            pointer-events: auto; } }
 
 body.coc section#who {
   background-image: url(../images/coc/theCrew.jpg);
   background-size: cover;
   background-position: center top; }
+  body.coc section#who h3 {
+    margin-bottom: 120px; }
+
+body.coc section#why {
+  overflow: hidden;
+  position: relative; }
+  body.coc section#why #particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #35373A;
+    margin-top: -50px; }
+  body.coc section#why canvas {
+    display: block;
+    vertical-align: bottom; }
