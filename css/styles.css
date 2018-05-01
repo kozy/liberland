@@ -52,33 +52,31 @@ a {
 .circ {
   border-radius: 100%; }
 
-.to-bottom {
-  position: absolute;
-  bottom: 12%;
-  left: 0;
-  right: 0; }
-
-button, a[class^="btn"] {
+a.btn, button {
+  -webkit-box-shadow: none;
+  box-shadow: none;
   text-transform: uppercase;
   border-radius: 3px;
   -webkit-transition: all .5s;
   transition: all .5s; }
-  button.btn-more, a[class^="btn"].btn-more {
+  a.btn.btn-more, button.btn-more {
     color: #35373A;
     border: none;
     background-image: -webkit-gradient(linear, left bottom, left top, from(#f1c823), to(rgba(241, 200, 35, 0)));
     background-image: linear-gradient(to top, #f1c823 0%, rgba(241, 200, 35, 0) 100%);
     background-color: #FFCB05; }
-    button.btn-more:hover, a[class^="btn"].btn-more:hover {
+    a.btn.btn-more:hover, button.btn-more:hover {
       color: black;
-      background-color: #FFED15;
       -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); }
-  button.btn-ghost, a[class^="btn"].btn-ghost {
+  a.btn.white, button.white {
+    background-image: none;
+    background-color: white; }
+  a.btn.btn-ghost, button.btn-ghost {
     border: 3px solid #FFCB05;
     background: transparent;
     color: #FFCB05; }
-    button.btn-ghost:hover, a[class^="btn"].btn-ghost:hover {
+    a.btn.btn-ghost:hover, button.btn-ghost:hover {
       color: black;
       -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15), inset 0 0 25px 50px #FFCB05;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15), inset 0 0 25px 50px #FFCB05; }
@@ -163,11 +161,36 @@ nav.navbar {
           display: block;
           margin: 0; }
 
-body header .container {
+body #intro .container {
   height: 100%;
   position: relative; }
-  body header .container h1 {
-    margin: 80px 0px 0px; }
+
+body header {
+  background: #555658;
+  background-position: 70% bottom;
+  background-size: cover;
+  height: auto;
+  color: white; }
+  body header h1 {
+    margin-top: 0;
+    margin-bottom: 50px;
+    text-shadow: 9px 7px 2px rgba(0, 0, 0, 0.03), -7px 9px 2px rgba(0, 0, 0, 0.03), -7px -7px 2px rgba(0, 0, 0, 0.03), 7px -7px 2px rgba(0, 0, 0, 0.06); }
+  body header h2 {
+    margin-top: 50px; }
+  @media (min-width: 992px) {
+    body header {
+      background-position: right top; }
+      body header blockquote {
+        background: transparent; } }
+
+body #laws p {
+  font-size: large; }
+
+body #constitution ul li {
+  margin-bottom: 15px; }
+
+body #donations ul li {
+  margin-bottom: 25px; }
 
 body section {
   padding: 50px 0; }
@@ -175,7 +198,7 @@ body section {
     background-color: #FFCB05; }
     body section.bg-yellow h3 {
       color: white; }
-    body section.bg-yellow button.btn-more {
+    body section.bg-yellow .btn-more {
       background-color: white;
       background-image: none;
       color: #35373A; }
@@ -211,11 +234,10 @@ body > footer {
       color: white; }
   body > footer input {
     border: 3px solid #FFCB05 !important;
-    border-right: none;
+    border-right: none !important;
     border-radius: 3px;
     padding: 6px 10px;
     height: 38px !important;
-    border-right: none !important;
     background: #555658;
     color: #d0d8de; }
     body > footer input::-webkit-input-placeholder {
@@ -239,160 +261,164 @@ body > footer {
       box-shadow: inset 0 0 2px rgba(255, 203, 5, 0.25), 0 0 2px rgba(255, 203, 5, 0.25);
       color: #35373A; }
 
-body.landing #intro {
-  background: #555658 url(../images/hero.svg) center center no-repeat;
+body.home #intro {
+  background: #555658 url(/images/hero.svg) center center no-repeat;
   background-size: cover;
   height: 100vh;
   max-height: 200vw;
   -webkit-box-shadow: inset 0 0 70px rgba(0, 0, 0, 0.35);
   box-shadow: inset 0 0 70px rgba(0, 0, 0, 0.35); }
-  body.landing #intro h1 {
-    margin: 80px 0px 0px !important; }
-  body.landing #intro .container {
+  body.home #intro .container {
     height: 100%;
     position: relative; }
-    body.landing #intro .container h1 {
+    body.home #intro .container h1 {
       text-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
-      margin: 80px 0; }
+      margin: 80px 0 0; }
+    body.home #intro .container .to-bottom {
+      position: absolute;
+      bottom: 200px;
+      width: 100%; }
 
-body.landing #what-headline {
-  background: url(../images/wave.svg) center top;
+body.home #what-headline {
+  background: url(/images/wave.svg) center top;
   background-size: cover;
   margin-top: -106px;
   padding: 50px 0 30px; }
-  body.landing #what-headline h3 {
+  body.home #what-headline h3 {
     margin: 0; }
 
-body.landing #what {
+body.home #what {
   position: relative;
   padding: 0; }
-  body.landing #what #gmap {
+  body.home #what #gmap {
     height: 100vh; }
-  body.landing #what #overmap {
+  body.home #what #overmap {
     height: 100vh;
     margin-top: -100vh;
     position: relative;
     pointer-events: none; }
-    body.landing #what #overmap .to-bottom {
+    body.home #what #overmap .to-bottom {
       position: absolute;
       bottom: 0;
       left: 10px;
       right: 10px; }
+      body.home #what #overmap .to-bottom .panel {
+        pointer-events: auto; }
 
-body.landing #mission {
-  background: #FFCB05 url(../images/mission.svg) center bottom no-repeat;
+body.home #mission {
+  background: #FFCB05 url(/images/mission.svg) center bottom no-repeat;
   background-size: cover; }
-  body.landing #mission h3 {
+  body.home #mission h3 {
     color: #35373A; }
 
-body.landing #products a {
+body.home #products a {
   text-decoration: none;
   -webkit-box-shadow: none;
   box-shadow: none; }
-  body.landing #products a .img-holder {
+  body.home #products a .img-holder {
     width: 125px;
     height: 125px;
     margin: auto; }
-  body.landing #products a h5, body.landing #products a p {
+  body.home #products a h5, body.home #products a p {
     color: #35373A; }
-  body.landing #products a.e-res .img-holder {
-    background-image: url(../images/icon-e-res.svg); }
-  body.landing #products a.e-res:hover .img-holder {
-    background-image: url(../images/icon-car-animated.svg); }
-  body.landing #products a.pass .img-holder {
-    background-image: url(../images/icon-pass.svg); }
-  body.landing #products a.pass:hover .img-holder {
-    background-image: url(../images/icon-car-animated.svg); }
-  body.landing #products a.comp .img-holder {
-    background-image: url(../images/icon-comp.svg); }
-  body.landing #products a.comp:hover .img-holder {
-    background-image: url(../images/icon-comp-animated.svg); }
-  body.landing #products a.car .img-holder {
-    background-image: url(../images/icon-car.svg); }
-  body.landing #products a.car:hover .img-holder {
-    background-image: url(../images/icon-car-animated.svg); }
+  body.home #products a.e-res .img-holder {
+    background-image: url(/images/icon-e-res.svg); }
+  body.home #products a.e-res:hover .img-holder {
+    background-image: url(/images/icon-car-animated.svg); }
+  body.home #products a.pass .img-holder {
+    background-image: url(/images/icon-pass.svg); }
+  body.home #products a.pass:hover .img-holder {
+    background-image: url(/images/icon-car-animated.svg); }
+  body.home #products a.comp .img-holder {
+    background-image: url(/images/icon-comp.svg); }
+  body.home #products a.comp:hover .img-holder {
+    background-image: url(/images/icon-comp-animated.svg); }
+  body.home #products a.car .img-holder {
+    background-image: url(/images/icon-car.svg); }
+  body.home #products a.car:hover .img-holder {
+    background-image: url(/images/icon-car-animated.svg); }
 
-body.landing #government {
+body.home #government {
   overflow: hidden;
   position: relative; }
-  body.landing #government #particles-js {
+  body.home #government #particles-js {
     position: absolute;
     width: 100%;
     height: 100%;
     background-color: #35373A;
     margin-top: -50px; }
-  body.landing #government canvas {
+  body.home #government canvas {
     display: block;
     vertical-align: bottom; }
-  body.landing #government .row.columns > div {
+  body.home #government .row.columns > div {
     padding-bottom: 20px; }
-  body.landing #government a div.circ {
+  body.home #government a div.circ {
     width: 210px;
     height: 210px;
     border: 5px solid #FFCB05;
     margin: auto; }
-    body.landing #government a div.circ img {
+    body.home #government a div.circ img {
       width: 200px;
       height: 200px;
       -webkit-filter: grayscale(100%) brightness(135%) contrast(120%);
       filter: grayscale(100%) brightness(135%) contrast(120%);
       -webkit-transition: all .25s;
       transition: all .25s; }
-  body.landing #government a h5, body.landing #government a p {
+  body.home #government a h5, body.home #government a p {
     color: white;
     -webkit-transition: all .25s;
     transition: all .25s; }
-  body.landing #government a:hover div.circ img {
+  body.home #government a:hover div.circ img {
     -webkit-filter: none;
     filter: none; }
-  body.landing #government a:hover h5, body.landing #government a:hover p {
+  body.home #government a:hover h5, body.home #government a:hover p {
     color: #FFCB05; }
 
-body.landing #partners {
+body.home #partners {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #fafafa), color-stop(50%, rgba(237, 237, 237, 0)));
   background: linear-gradient(#fafafa 50%, rgba(237, 237, 237, 0) 50%);
   background-size: 90px;
   padding: 0; }
-  body.landing #partners .container {
-    background: url(../images/romb.svg) center center;
+  body.home #partners .container {
+    background: url(/images/romb.svg) center center;
     background-size: cover;
     padding-top: 50px;
     padding-bottom: 50px; }
-    body.landing #partners .container a {
+    body.home #partners .container a {
       -webkit-box-shadow: none;
       box-shadow: none; }
-      body.landing #partners .container a img {
+      body.home #partners .container a img {
         width: 100%;
         max-width: 100px;
         -webkit-filter: grayscale(100%);
         filter: grayscale(100%); }
 
-body.landing #news h3 {
+body.home #news h3 {
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(39%, #FFCB05), color-stop(40%, white), color-stop(60%, white), color-stop(61%, #FFCB05));
   background-image: linear-gradient(to bottom, #FFCB05 39%, white 40%, white 60%, #FFCB05 61%);
   text-shadow: 8px 2px 0px #FFCB05, 8px -2px #FFCB05, -9px 2px #FFCB05, 14px -7px #FFCB05, 14px -2px #FFCB05, -16px 0px #FFCB05; }
 
-body.landing #news a {
+body.home #news a {
   -webkit-box-shadow: none;
   box-shadow: none;
   color: #35373A; }
-  body.landing #news a img {
+  body.home #news a img {
     width: 100%;
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%); }
-  body.landing #news a:hover {
+  body.home #news a:hover {
     color: black; }
-    body.landing #news a:hover img {
+    body.home #news a:hover img {
       -webkit-filter: grayscale(0%);
       filter: grayscale(0%); }
 
-body.landing #media .col-sm-3.col-xs-4 {
+body.home #media .col-sm-3.col-xs-4 {
   height: 120px; }
 
-body.landing #media a {
+body.home #media a {
   -webkit-box-shadow: none;
   box-shadow: none; }
-  body.landing #media a img {
+  body.home #media a img {
     -webkit-transition: all 200ms ease-in-out;
     transition: all 200ms ease-in-out;
     -webkit-filter: grayscale(100%);
@@ -400,69 +426,36 @@ body.landing #media a {
     max-width: 200px;
     width: 100%;
     margin: 20px auto; }
-  body.landing #media a:hover img {
+  body.home #media a:hover img {
     -webkit-filter: grayscale(0%);
     filter: grayscale(0%); }
 
-body.aboutll header {
-  background: #646462 url(../images/about-hero.jpg);
+body.liberland header {
+  background: #646462 url(/images/about-hero.jpg);
   background-position: 70% bottom;
   background-size: cover;
   height: 100vh;
   max-height: 200vw;
   color: white; }
-  body.aboutll header h1 {
+  body.liberland header h1 {
     margin-top: 0;
     text-shadow: 9px 7px 2px rgba(0, 0, 0, 0.03), -7px 9px 2px rgba(0, 0, 0, 0.03), -7px -7px 2px rgba(0, 0, 0, 0.03), 7px -7px 2px rgba(0, 0, 0, 0.06); }
-  body.aboutll header h2 {
+  body.liberland header h2 {
     margin-top: 180px; }
-  body.aboutll header blockquote {
+  body.liberland header blockquote {
     text-shadow: 5px 5px 2px rgba(0, 0, 0, 0.03), -5px 5px 2px rgba(0, 0, 0, 0.03), -5px -5px 2px rgba(0, 0, 0, 0.03), 5px -5px 2px rgba(0, 0, 0, 0.06);
     background: rgba(0, 0, 0, 0.5); }
   @media (min-width: 992px) {
-    body.aboutll header {
+    body.liberland header {
       height: 80vh;
       background-position: right top; }
-      body.aboutll header blockquote {
+      body.liberland header blockquote {
         background: transparent; } }
 
-body.aboutll #counter .figures {
+body.liberland #counter .figures {
   padding-bottom: 0; }
-  body.aboutll #counter .figures p {
+  body.liberland #counter .figures p {
     padding-bottom: 0; }
-
-body.lc header {
-  background: #555658;
-  background-position: 70% bottom;
-  background-size: cover;
-  height: auto;
-  color: white; }
-  body.lc header h1 {
-    margin-top: 0;
-    margin-bottom: 50px;
-    text-shadow: 9px 7px 2px rgba(0, 0, 0, 0.03), -7px 9px 2px rgba(0, 0, 0, 0.03), -7px -7px 2px rgba(0, 0, 0, 0.03), 7px -7px 2px rgba(0, 0, 0, 0.06); }
-  body.lc header h2 {
-    margin-top: 50px; }
-  @media (min-width: 992px) {
-    body.lc header {
-      background-position: right top; }
-      body.lc header blockquote {
-        background: transparent; } }
-
-body.lc #laws p {
-  font-size: large; }
-
-body.lc #constitution {
-  /*
-			.container {
-				    max-width: 880px;
-			}
-*/ }
-  body.lc #constitution ul li {
-    margin-bottom: 15px; }
-
-body.lc #donations ul li {
-  margin-bottom: 25px; }
 
 body.contact {
   background: #555658; }
@@ -507,22 +500,31 @@ body.contact {
     body.contact .panel .panel-body {
       height: 170px; }
 
-body.ico #particles {
+body.application #particles {
   position: absolute;
   width: 100%;
   height: 100%;
   margin-top: -50px; }
 
-body.ico #intro {
+body.application #intro {
   background-color: #555658;
   background-size: cover;
   height: 100vh;
   max-height: 200vw;
   -webkit-box-shadow: inset 0 0 70px rgba(0, 0, 0, 0.35);
   box-shadow: inset 0 0 70px rgba(0, 0, 0, 0.35); }
-  body.ico #intro .container {
-    height: 100%;
-    padding-top: 10%; }
+  body.application #intro .container {
+    height: 100%; }
+
+body.application input[type=checkbox] {
+  margin-right: 8px; }
+
+.simple-page h1, .simple-page h2, .simple-page h3 {
+  text-align: center;
+  margin-top: 2em; }
+
+.simple-page p {
+  margin-bottom: 1.5em; }
 
 .wait1 {
   -webkit-animation-delay: 0.25s;
@@ -544,3 +546,66 @@ body.ico #intro {
   [class^="wait"] {
     -webkit-animation-delay: 0;
     animation-delay: 0; } }
+
+body.embassy header {
+  background: white;
+  color: red; }
+  body.embassy header h1, body.embassy header h2 {
+    text-shadow: none; }
+  body.embassy header h1 {
+    margin: 30px 0 10px; }
+  body.embassy header h2 {
+    color: #555658;
+    margin: 0 0 30px; }
+  body.embassy header .flag {
+    width: 100%;
+    height: 30px;
+    background: #FFCB05 url(/images/header-bg.png) repeat-x;
+    background-size: contain; }
+
+body.coc header {
+  background: white; }
+  body.coc header h1, body.coc header h2 {
+    text-shadow: none; }
+  body.coc header h1 {
+    margin: 30px 0 10px; }
+  body.coc header h2 {
+    color: #555658;
+    margin: 0 0 30px; }
+  body.coc header .flag {
+    width: 100%;
+    height: 30px;
+    background: #FFCB05 url(/images/header-bg.png) repeat-x;
+    background-size: contain; }
+
+body.coc section#general {
+  position: relative;
+  padding: 0; }
+  body.coc section#general #gmap {
+    height: 100vh; }
+  body.coc section#general #overmap {
+    height: 100vh;
+    margin-top: -100vh;
+    position: relative;
+    pointer-events: none; }
+    body.coc section#general #overmap .to-bottom {
+      position: absolute;
+      bottom: 0;
+      left: 15px;
+      right: 15px; }
+      body.coc section#general #overmap .to-bottom .panel {
+        pointer-events: auto; }
+    body.coc section#general #overmap .to-middle {
+      position: absolute;
+      bottom: 50%;
+      -webkit-transform: translateY(50%);
+      transform: translateY(50%);
+      left: 15px;
+      right: 15px; }
+      body.coc section#general #overmap .to-middle .panel {
+        pointer-events: auto; }
+
+body.coc section#who {
+  background-image: url(../images/coc/theCrew.jpg);
+  background-size: cover;
+  background-position: center top; }

@@ -31,7 +31,7 @@ gulp.task('connect', function() {
 });
 
 gulp.task('watchMyStyles', function() {
-    gulp.watch(['sass/*.scss','sass/partials/*.scss'], ['myStyles']);
+    gulp.watch(['sass/*.scss','sass/partials/*.scss','sass/subdomains/*.scss'], ['myStyles']);
 });
 
 gulp.task('default', ['watchMyStyles', 'connect']);
