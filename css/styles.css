@@ -658,3 +658,39 @@ body.coc section#why {
   body.coc section#why canvas {
     display: block;
     vertical-align: bottom; }
+  body.coc section#why .container {
+    position: relative;
+    z-index: 120; }
+    body.coc section#why .container a {
+      display: block;
+      -webkit-box-shadow: none;
+      box-shadow: none; }
+      body.coc section#why .container a .circ {
+        background: #555658;
+        text-align: center;
+        position: relative;
+        margin-bottom: 25px;
+        -webkit-box-shadow: 0 0 0px 10px #555658, 0 0 0px 10px #555658;
+        box-shadow: 0 0 0px 10px #555658, 0 0 0px 10px #555658;
+        -webkit-transition: all .5s;
+        transition: all .5s; }
+        body.coc section#why .container a .circ:after {
+          content: "";
+          display: block;
+          padding-bottom: 100%; }
+        body.coc section#why .container a .circ p {
+          padding: 0px;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          width: 65%;
+          -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+          color: #e4e3e4;
+          -webkit-transition: all .25s;
+          transition: all .25s; }
+      body.coc section#why .container a:hover .circ {
+        -webkit-box-shadow: 0 0 0px 10px #555658, 0 0 10px 20px rgba(85, 86, 88, 0);
+        box-shadow: 0 0 0px 10px #555658, 0 0 10px 20px rgba(85, 86, 88, 0); }
+        body.coc section#why .container a:hover .circ p {
+          color: white !important; }
