@@ -214,6 +214,10 @@ body section {
   body section.bg-dark {
     background-color: #35373A;
     color: white; }
+    body section.bg-dark .panel {
+      color: #35373A;
+      -webkit-box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5); }
 
 body > footer {
   background: #35373A;
@@ -694,3 +698,6 @@ body.coc section#why {
         box-shadow: 0 0 0px 10px #555658, 0 0 10px 20px rgba(85, 86, 88, 0); }
         body.coc section#why .container a:hover .circ p {
           color: white !important; }
+
+body.coc.coc-about #about h3 {
+  color: #FFCB05; }
