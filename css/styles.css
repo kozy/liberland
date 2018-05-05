@@ -198,6 +198,8 @@ body section {
     background-color: #FFCB05; }
     body section.bg-yellow h3 {
       color: white; }
+    body section.bg-yellow .panel h3 {
+      color: #FFCB05; }
     body section.bg-yellow .btn-more {
       background-color: white;
       background-image: none;
@@ -710,3 +712,12 @@ body.coc.coc-about #lists {
 				background: url(../images/coc/dot-grid.png);
 			}
 */ }
+
+body.coc.coc-liberland #future {
+  background-image: url(../images/coc/circuit.svg);
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  background-size: contain; }
+  body.coc.coc-liberland #future p {
+    font-size: 16px;
+    font-weight: 600; }

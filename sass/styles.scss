@@ -315,8 +315,10 @@ body {
 	section{
 		padding: 50px 0;
 		&.bg-yellow{
-			h3 { color: white;}
 			background-color: $yellow;
+			
+			h3 { color: white;}
+			.panel h3 { color: $yellow}
 			.btn-more{
 				background-color: white;
 				background-image: none;

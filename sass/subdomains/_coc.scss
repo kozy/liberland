@@ -179,4 +179,16 @@ body.coc {
 */
 		}
 	}
+	&.coc-liberland {
+		#future {
+			background-image: url(../images/coc/circuit.svg);
+			background-position: right bottom;
+			background-repeat: no-repeat;
+			background-size: contain;
+			p{
+				font-size: 16px;
+				font-weight: 600;
+			}
+		}
+	}
 }
