@@ -701,3 +701,12 @@ body.coc section#why {
 
 body.coc.coc-about #about h3 {
   color: #FFCB05; }
+
+body.coc.coc-about #lists {
+  /*
+			background-image: url(../images/coc/anim-bg.gif);
+			background-size: contain;
+			.container {
+				background: url(../images/coc/dot-grid.png);
+			}
+*/ }
