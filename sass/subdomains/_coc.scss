@@ -1,11 +1,21 @@
 body.coc {
 	header {
 		background: white ;
-		h1, h2 { text-shadow: none;}
-		h1 { margin: 30px 0 10px}
+		a.home {
+			box-shadow: none;
+		}
+		img {
+			float: left;
+			margin-top: 10px;
+		}
+		h1, h2 { text-shadow: none; display: inline-block}
+		h1 { 
+			margin: 30px 0 10px 5px;
+			font-size: 42px;
+		}
 		h2 { 
 			color: $gray-m;
-			margin: 0 0 30px;
+			margin: 0 0 30px 5px;
 			
 		}
 		.flag {

@@ -571,13 +571,21 @@ body.embassy header {
 
 body.coc header {
   background: white; }
+  body.coc header a.home {
+    -webkit-box-shadow: none;
+    box-shadow: none; }
+  body.coc header img {
+    float: left;
+    margin-top: 10px; }
   body.coc header h1, body.coc header h2 {
-    text-shadow: none; }
+    text-shadow: none;
+    display: inline-block; }
   body.coc header h1 {
-    margin: 30px 0 10px; }
+    margin: 30px 0 10px 5px;
+    font-size: 42px; }
   body.coc header h2 {
     color: #555658;
-    margin: 0 0 30px; }
+    margin: 0 0 30px 5px; }
   body.coc header .flag {
     width: 100%;
     height: 30px;
