@@ -729,3 +729,6 @@ body.coc.coc-liberland #future {
   body.coc.coc-liberland #future p {
     font-size: 16px;
     font-weight: 600; }
+
+body.coc.coc-members #members img {
+  width: 100%; }
