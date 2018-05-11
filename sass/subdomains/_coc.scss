@@ -15,7 +15,7 @@ body.coc {
 		}
 		h2 { 
 			color: $gray-m;
-			margin: 0 0 30px 5px;
+			margin: 0 0 20px 5px;
 			
 		}
 		.flag {
@@ -66,6 +66,10 @@ body.coc {
 				}
 			} 
 		}
+	}
+	
+	footer {
+		border-top: 10px solid $yellow;
 	}
 	
 	section {
@@ -204,6 +208,7 @@ body.coc {
 	}
 	&.coc-members {
 		#filter {
+			padding-bottom: 5px;
 			.dropdown-toggle {
 				width: 100%;
 			}
@@ -211,11 +216,29 @@ body.coc {
 		#members {
 			display: block;
 			position: relative;
+			padding-top: 0;
+			padding-bottom: 100px;
+			
 			.cell {
-				
+				//background: red;
+				height: 50vw;
+				//padding-bottom: 10px;
+				margin-bottom: 45px;
+				@include breakpoint(sm){
+					height: 15vw;
+				}
+				@include breakpoint(md){
+					height: 30vw;
+				}
+				@include breakpoint(lg){
+					height: 15vw;
+				}
+
 				button.transparent {
+/*
 					top: 50%;
 					transform: translateY(-50%);
+*/
 					background: transparent;
 					border: none;
 					width: 100%;
@@ -229,6 +252,14 @@ body.coc {
 			}
 			
 			
+		}
+	}
+	&.coc-contact {
+		#map {
+			height: 80vh;
+			#vmap {
+				height: 100%;
+			}
 		}
 	}
 }

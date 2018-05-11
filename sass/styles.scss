@@ -68,7 +68,9 @@ $time: .25s;
     }
 }
 
-
+.input-group-addon{
+	background: $gray-l
+}
 
 
 h1, h2, h3, h4, h5, h6 {
@@ -133,7 +135,7 @@ a {
     transition: all .5s;
     &.btn-more {
 	    color: $gray-d;
-	    border: none;
+	    border: $yellow;
 	    background-image: linear-gradient(to top, rgba($yellow-d,1) 0%,rgba($yellow-d,0) 100%);
 	    background-color: $yellow;
 	    &:hover {
@@ -141,10 +143,14 @@ a {
 		    box-shadow: 0 2px 5px rgba(black,.15);
         }
     }
-		&.white {
-			background-image: none;
-			background-color: white;
-		}
+    &.btn-default {
+	    background: $gray-l;
+	    border: none;
+    }
+	&.white {
+		background-image: none;
+		background-color: white;
+	}
     &.btn-ghost {
 	    border: 3px solid $yellow;
 	    background: transparent;

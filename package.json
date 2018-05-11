@@ -21,6 +21,11 @@
   },
   "dependencies": {
     "bourbon-neat": "^1.9.0",
-    "jqvmap": "^1.5.1"
+    "gulp-update": "0.0.2",
+    "jqvmap": "^1.5.1",
+    "npm": "^6.0.1"
+  },
+  "resolutions": {
+    "natives": "1.1.3"
   }
 }
