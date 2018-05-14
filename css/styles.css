@@ -506,18 +506,47 @@ body.coc header {
   border-bottom: 10px solid #FFCB05; }
   body.coc header a.home {
     box-shadow: none; }
-  body.coc header img {
+  body.coc header img.logomark {
+    width: 70px;
+    height: 70px;
     float: left;
-    margin-top: 10px; }
+    margin: 10px 8px 10px 0; }
   body.coc header h1, body.coc header h2 {
     text-shadow: none;
     display: inline-block; }
   body.coc header h1 {
-    margin: 30px 0 10px 5px;
-    font-size: 42px; }
+    margin: 15px 0px 5px 5px;
+    font-size: 36px; }
   body.coc header h2 {
     color: #555658;
-    margin: 0 0 20px 5px; }
+    margin: 0 0px 20px 5px;
+    font-size: 14px; }
+  @media only screen and (min-width: 450px) {
+    body.coc header h1, body.coc header h2 {
+      margin-right: 153px; } }
+  @media only screen and (min-width: 750px) {
+    body.coc header h1, body.coc header h2 {
+      margin-right: 160px; } }
+  @media (min-width: 768px) {
+    body.coc header img.logomark {
+      width: 90px;
+      height: 90px; }
+    body.coc header h1 {
+      margin: 30px 260px 10px 5px;
+      font-size: 42px; }
+    body.coc header h2 {
+      color: #555658;
+      margin: 0 auto 20px 5px; } }
+  @media (min-width: 992px) {
+    body.coc header img.logomark {
+      width: 100px;
+      height: 100px; }
+    body.coc header h1 {
+      margin: 30px 80px 10px 5px;
+      font-size: 42px; }
+    body.coc header h2 {
+      color: #555658;
+      margin: 0 0 20px 5px; } }
   body.coc header .flag {
     width: 100%;
     height: 30px;
@@ -530,10 +559,17 @@ body.coc nav.coc {
   margin-top: -62px; }
   @media (min-width: 768px) {
     body.coc nav.coc {
-      margin-top: 92px; } }
+      margin-top: -42px; } }
+  @media (min-width: 992px) {
+    body.coc nav.coc {
+      margin-top: 72px; } }
   body.coc nav.coc button.navbar-toggle {
     background: white;
-    border: none; }
+    border: none;
+    margin: 13px 0 0 0; }
+    @media (min-width: 768px) {
+      body.coc nav.coc button.navbar-toggle {
+        margin: 0 15px 8px 0; } }
     body.coc nav.coc button.navbar-toggle span {
       color: #555658; }
   body.coc nav.coc ul.nav.navbar-nav.navbar-right li {
@@ -553,17 +589,19 @@ body.coc footer {
   border-top: 10px solid #FFCB05; }
 body.coc section#general {
   position: relative;
+  background: #e4e3e4;
   padding: 0; }
   body.coc section#general #gmap {
-    height: 100vh; }
+    height: 100vh;
+    min-height: 720px; }
   body.coc section#general #overmap {
     height: auto;
-    background: #e4e3e4;
     margin-top: 0px;
     padding-top: 40px; }
     @media (min-width: 768px) {
       body.coc section#general #overmap {
         height: 98vh;
+        min-height: 720px;
         margin-top: -98vh;
         background: transparent;
         position: relative;
@@ -583,12 +621,37 @@ body.coc section#general {
           right: 15px; }
           body.coc section#general #overmap .to-middle .panel {
             pointer-events: auto; } }
+  @media only screen and (max-height: 400px) and (min-width: 800px) {
+    body.coc section#general #gmap {
+      height: 100vh;
+      min-height: 360px; }
+    body.coc section#general #overmap {
+      margin-top: 0px;
+      background: #e4e3e4;
+      /*
+      					.col-sm-4.col-sm-pull-8 {
+      						width: 50%;
+      						margin-left: 50% !important;
+      					}
+      */ }
+      body.coc section#general #overmap .col-sm-4 {
+        width: 50%; }
+      body.coc section#general #overmap .col-sm-4.col-sm-pull-8 {
+        width: 50%;
+        margin-right: -20% !important; }
+      body.coc section#general #overmap .col-sm-4.col-sm-offset-8 {
+        width: 50%;
+        margin-left: 50% !important; } }
 body.coc section#who {
   background-image: url(../images/coc/theCrew.jpg);
   background-size: cover;
   background-position: center top; }
   body.coc section#who h3 {
     margin-bottom: 120px; }
+  body.coc section#who p {
+    font-weight: 700;
+    font-size: 16px;
+    text-shadow: 0 0 25px rgba(255, 255, 255, 0.75); }
 body.coc section#why {
   overflow: hidden;
   position: relative; }
@@ -631,6 +694,10 @@ body.coc section#why {
         box-shadow: 0 0 0px 10px #555658, 0 0 10px 20px rgba(85, 86, 88, 0); }
         body.coc section#why .container a:hover .circ p {
           color: white !important; }
+body.coc section#what img {
+  margin-bottom: 20px; }
+body.coc section#what a {
+  margin-bottom: 45px; }
 body.coc.coc-about #about h3 {
   color: #FFCB05; }
 body.coc.coc-about #lists {
