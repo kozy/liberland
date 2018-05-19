@@ -65,6 +65,11 @@ a.btn, button {
     a.btn.btn-more:hover, button.btn-more:hover {
       color: black;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); }
+    a.btn.btn-more.shadow, button.btn-more.shadow {
+      box-shadow: 5px 10px 0 #555658;
+      transition: all .25s; }
+      a.btn.btn-more.shadow:hover, button.btn-more.shadow:hover {
+        box-shadow: 1px 2px 0 #555658; }
   a.btn.btn-default, button.btn-default {
     background: #e4e3e4;
     border: none; }
@@ -587,6 +592,12 @@ body.coc nav.coc {
       padding: 15px 5px; }
 body.coc footer {
   border-top: 10px solid #FFCB05; }
+body.coc .icon-like {
+  color: #FFCB05;
+  text-shadow: 5px 10px 0 #555658;
+  font-family: "Alfa Slab One", serif;
+  font-size: 128px;
+  line-height: 146px; }
 body.coc section#general {
   position: relative;
   background: #e4e3e4;
