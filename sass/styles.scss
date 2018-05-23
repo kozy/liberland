@@ -173,6 +173,19 @@ a {
         }
     }
 }
+.metadata {
+	font-weight: 700;
+	color: rgba($gray-m,.5 );
+	font-size: 12px;
+	text-transform: uppercase;
+}
+.tag {
+	background: $gray-l;
+	border-radius: 3px;
+	padding: 4px 8px;
+	line-height: 30px;
+	box-shadow: inset 0 -1px 0 rgba($gray-m,.5 );
+}
 .btn-ellipsis {
 
 }
@@ -760,6 +773,13 @@ $time: .25s;
 @include breakpoint(sm){
 	[class^="wait"] {
 		animation-delay: 0;
+	}
+}
+
+
+.modal {
+	.modal-title {
+		display: inline;
 	}
 }
 
