@@ -52,6 +52,9 @@ a {
 .circ {
   border-radius: 100%; }
 
+.yellow {
+  color: #FFCB05; }
+
 a.btn, button {
   box-shadow: none;
   text-transform: uppercase;
@@ -625,6 +628,8 @@ body.coc section#general {
     height: auto;
     margin-top: 0px;
     padding-top: 40px; }
+    body.coc section#general #overmap .row {
+      pointer-events: auto; }
     @media (min-width: 768px) {
       body.coc section#general #overmap {
         height: 98vh;
@@ -782,6 +787,8 @@ body.coc.coc-members #members {
       body.coc.coc-members #members .cell button.transparent img {
         max-width: 80%;
         max-height: 80%; }
+body.coc.coc-members .modal .modal-header {
+  text-align: center; }
 body.coc.coc-members .modal .col-xs-12 {
   margin-bottom: 20px; }
 body.coc.coc-members .modal .metadata {

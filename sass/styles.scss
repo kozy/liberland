@@ -128,7 +128,9 @@ a {
 .circ {
 	border-radius: 100%;
 }
-
+.yellow {
+	color: $yellow;
+}
  a.btn, button {
 	box-shadow: none;
     text-transform: uppercase;

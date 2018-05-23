@@ -152,6 +152,10 @@ body.coc {
 				margin-top: 0px;
 				padding-top: 40px; 
 				
+				.row {
+					pointer-events: auto;
+				}
+				
 				@include breakpoint(sm){
 					height: 98vh;
 					min-height: 720px;
@@ -362,6 +366,9 @@ body.coc {
 			}
 		}
 		.modal {
+			.modal-header {
+			    text-align: center;
+			}
 			.col-xs-12 {
 				margin-bottom: 20px;
 				
