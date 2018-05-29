@@ -1,0 +1,96 @@
+body.kayak {
+	header {
+		background-image: url(../images/kayak/river.jpg);
+		background-color: white;
+		color: red;
+		height: 70vh;
+		
+		h1, h2 {
+			text-shadow: none;
+			text-align: right;
+		}
+		h1 { margin: 10px 0 10px}
+		h2 { 
+			color: $gray-m;
+			margin: 60px 0 10px;
+		}
+	}
+	#about {
+		position: relative;
+		.row {
+			position: relative;
+			z-index: 1000;	
+		}
+		&::before, &::after {
+			content: "";
+			height: 210px;
+			width: 100%;
+			display: block;
+			transform: skewY(-4.29deg);
+			background-color: white;
+			position: absolute;
+			z-index: 100;
+		}
+		&::before {
+			top: -190px;
+			transform-origin: right top;
+		}
+		&::after {
+			bottom: 0px; 
+			transform-origin: left top;
+			transform: skewY(4.29deg);
+		}
+	}
+	#calendar {
+		padding-top: 150px;
+	}
+	#kayakA {
+		height: 50vh;
+		background-position: center top;
+		background-image: url(../images/kayak/kayak-A.jpg);
+		.container {
+			position: relative;
+			height: 100%;
+			.row {
+				position: relative;
+				height: 100%;
+				.to-bottom {
+					position: absolute;
+					bottom: -30px;
+				    width: 100%;
+				    h3 {
+					    color: white;
+					    letter-spacing: 3px;
+					    text-transform: uppercase;
+				    }
+				}
+			}
+		}
+		
+	}
+	#sponsors {
+		.col-sm-3.col-xs-4 {
+			height: 80px;
+			a{
+				box-shadow: none;
+				
+				img {
+				    transition: all 200ms ease-in-out;
+				    filter: grayscale(100%);
+				    max-width: 200px;
+				    width: 100%;
+				    margin: 20px auto;
+			    }
+			    &:hover img {
+				    filter: grayscale(0%);
+			    }
+			}
+		}
+		
+	}
+	#kayakV {
+		background-image: url(../images/kayak/kayak-V.jpg);
+		height: 50vh;
+		background-position: center bottom ;
+	}
+}

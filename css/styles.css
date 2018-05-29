@@ -201,7 +201,8 @@ body #constitution ul li {
 body #donations ul li {
   margin-bottom: 25px; }
 body section {
-  padding: 50px 0; }
+  padding: 50px 0;
+  background-size: cover; }
   body section.bg-yellow {
     background-color: #FFCB05; }
     body section.bg-yellow h3 {
@@ -803,5 +804,76 @@ body.coc.coc-contact #map {
   height: 80vh; }
   body.coc.coc-contact #map #vmap {
     height: 100%; }
+
+body.kayak header {
+  background-image: url(../images/kayak/river.jpg);
+  background-color: white;
+  color: red;
+  height: 70vh; }
+  body.kayak header h1, body.kayak header h2 {
+    text-shadow: none;
+    text-align: right; }
+  body.kayak header h1 {
+    margin: 10px 0 10px; }
+  body.kayak header h2 {
+    color: #555658;
+    margin: 60px 0 10px; }
+body.kayak #about {
+  position: relative; }
+  body.kayak #about .row {
+    position: relative;
+    z-index: 1000; }
+  body.kayak #about::before, body.kayak #about::after {
+    content: "";
+    height: 210px;
+    width: 100%;
+    display: block;
+    transform: skewY(-4.29deg);
+    background-color: white;
+    position: absolute;
+    z-index: 100; }
+  body.kayak #about::before {
+    top: -190px;
+    transform-origin: right top; }
+  body.kayak #about::after {
+    bottom: 0px;
+    transform-origin: left top;
+    transform: skewY(4.29deg); }
+body.kayak #calendar {
+  padding-top: 150px; }
+body.kayak #kayakA {
+  height: 50vh;
+  background-position: center top;
+  background-image: url(../images/kayak/kayak-A.jpg); }
+  body.kayak #kayakA .container {
+    position: relative;
+    height: 100%; }
+    body.kayak #kayakA .container .row {
+      position: relative;
+      height: 100%; }
+      body.kayak #kayakA .container .row .to-bottom {
+        position: absolute;
+        bottom: -30px;
+        width: 100%; }
+        body.kayak #kayakA .container .row .to-bottom h3 {
+          color: white;
+          letter-spacing: 3px;
+          text-transform: uppercase; }
+body.kayak #sponsors .col-sm-3.col-xs-4 {
+  height: 80px; }
+  body.kayak #sponsors .col-sm-3.col-xs-4 a {
+    box-shadow: none; }
+    body.kayak #sponsors .col-sm-3.col-xs-4 a img {
+      transition: all 200ms ease-in-out;
+      filter: grayscale(100%);
+      max-width: 200px;
+      width: 100%;
+      margin: 20px auto; }
+    body.kayak #sponsors .col-sm-3.col-xs-4 a:hover img {
+      filter: grayscale(0%); }
+body.kayak #kayakV {
+  background-image: url(../images/kayak/kayak-V.jpg);
+  height: 50vh;
+  background-position: center bottom; }
 
 /*# sourceMappingURL=styles.css.map */

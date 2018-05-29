@@ -73,7 +73,8 @@ $time: .25s;
 }
 
 .input-group-addon{
-	background: $gray-l
+	background: $gray-l;
+	
 }
 
 
@@ -346,6 +347,8 @@ body {
 
 	section{
 		padding: 50px 0;
+		background-size: cover;
+		
 		&.bg-yellow{
 			background-color: $yellow;
 			
@@ -787,3 +790,4 @@ $time: .25s;
 
 @import "subdomains/embassy";
 @import "subdomains/coc";
+@import "subdomains/kayak";
