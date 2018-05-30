@@ -805,75 +805,188 @@ body.coc.coc-contact #map {
   body.coc.coc-contact #map #vmap {
     height: 100%; }
 
-body.kayak header {
-  background-image: url(../images/kayak/river.jpg);
-  background-color: white;
-  color: red;
-  height: 70vh; }
-  body.kayak header h1, body.kayak header h2 {
-    text-shadow: none;
-    text-align: right; }
-  body.kayak header h1 {
-    margin: 10px 0 10px; }
-  body.kayak header h2 {
-    color: #555658;
-    margin: 60px 0 10px; }
-body.kayak #about {
-  position: relative; }
-  body.kayak #about .row {
-    position: relative;
-    z-index: 1000; }
-  body.kayak #about::before, body.kayak #about::after {
-    content: "";
-    height: 210px;
-    width: 100%;
-    display: block;
-    transform: skewY(-4.29deg);
+body.kayak {
+  font-size: 16px; }
+  body.kayak header {
+    background-image: url(../images/kayak/river.jpg);
     background-color: white;
-    position: absolute;
-    z-index: 100; }
-  body.kayak #about::before {
-    top: -190px;
-    transform-origin: right top; }
-  body.kayak #about::after {
-    bottom: 0px;
-    transform-origin: left top;
-    transform: skewY(4.29deg); }
-body.kayak #calendar {
-  padding-top: 150px; }
-body.kayak #kayakA {
-  height: 50vh;
-  background-position: center top;
-  background-image: url(../images/kayak/kayak-A.jpg); }
-  body.kayak #kayakA .container {
-    position: relative;
-    height: 100%; }
-    body.kayak #kayakA .container .row {
+    color: red;
+    height: 70vh; }
+    body.kayak header .row, body.kayak header .container {
       position: relative;
       height: 100%; }
-      body.kayak #kayakA .container .row .to-bottom {
-        position: absolute;
-        bottom: -30px;
-        width: 100%; }
-        body.kayak #kayakA .container .row .to-bottom h3 {
-          color: white;
-          letter-spacing: 3px;
-          text-transform: uppercase; }
-body.kayak #sponsors .col-sm-3.col-xs-4 {
-  height: 80px; }
-  body.kayak #sponsors .col-sm-3.col-xs-4 a {
-    box-shadow: none; }
-    body.kayak #sponsors .col-sm-3.col-xs-4 a img {
-      transition: all 200ms ease-in-out;
-      filter: grayscale(100%);
-      max-width: 200px;
+    body.kayak header .headline {
+      position: absolute;
+      bottom: 200px; }
+      body.kayak header .headline h1, body.kayak header .headline h2 {
+        text-shadow: none; }
+      body.kayak header .headline h1 {
+        margin: 10px 0 10px; }
+      body.kayak header .headline h2 {
+        color: #555658;
+        margin: 0 0 10px;
+        font-size: 32px;
+        text-transform: uppercase; }
+  body.kayak #about {
+    position: relative; }
+    body.kayak #about .row {
+      position: relative;
+      z-index: 1000; }
+    body.kayak #about::before, body.kayak #about::after {
+      content: "";
+      height: 210px;
       width: 100%;
-      margin: 20px auto; }
-    body.kayak #sponsors .col-sm-3.col-xs-4 a:hover img {
-      filter: grayscale(0%); }
-body.kayak #kayakV {
-  background-image: url(../images/kayak/kayak-V.jpg);
-  height: 50vh;
-  background-position: center bottom; }
+      display: block;
+      transform: skewY(-4.29deg);
+      background-color: white;
+      position: absolute;
+      z-index: 100; }
+    body.kayak #about::before {
+      top: -190px;
+      transform-origin: right top; }
+    body.kayak #about::after {
+      bottom: 0px;
+      transform-origin: left top;
+      transform: skewY(4.29deg); }
+  body.kayak #calendar {
+    padding-top: 150px;
+    /*
+    			.gCalFlow {
+    			  $radius_size: 4px;
+    			  $light_color: #fff;
+    			  $dark_color: #eee;
+    			  border-style: solid;
+    			  border-width: 1px;
+    			  border-color: #ccc #999 #999 #ccc;
+    			  -webkit-border-radius: $radius_size;
+    			  -moz-border-radius: $radius_size;
+    			  border-radius: $radius_size;
+    			  background: -webkit-gradient(linear, left top, left bottom, from($light_color), to($dark_color));
+    			  background: -moz-linear-gradient(top, $light_color, $dark_color);
+    			  background: -o-linear-gradient(top, $light_color, $dark_color);
+    			  background: linear-gradient(to bottom, $light_color, $dark_color);
+    			  filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#ffffffff,EndColorStr=#ffeeeeee); zoom:1;
+    			  color: blak;
+    			
+    			  .gcf-header-block {
+    			    $light_color: #AAB1DC;
+    			    $dark_color: #3B4CA5;
+    			    -webkit-border-top-left-radius: $radius_size;
+    			    -webkit-border-top-right-radius: $radius_size;
+    			    -moz-border-top-left-radius: $radius_size;
+    			    -moz-border-top-right-radius: $radius_size;
+    			    border-top-left-radius: $radius_size;
+    			    border-top-right-radius: $radius_size;
+    			    background: -webkit-gradient(linear, left top, left bottom, from($light_color), to($dark_color));
+    			    background: -moz-linear-gradient(top, $light_color, $dark_color);
+    			    background: -o-linear-gradient(top, $light_color, $dark_color);
+    			    background: linear-gradient(to bottom, $light_color, $dark_color);
+    			    filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#ffAAB1DC,EndColorStr=#ff3B4CA5); zoom:1;
+    			  }
+    			  .gcf-item-body-block {
+    			    color: #333;
+    			  }
+    			}
+    */ }
+    body.kayak #calendar .gCalFlow {
+      position: relative;
+      width: 100%;
+      height: 400px;
+      float: left;
+      font-size: 90%;
+      overflow: hidden;
+      text-decoration: none;
+      padding-bottom: 0.5em; }
+      body.kayak #calendar .gCalFlow a, body.kayak #calendar .gCalFlow a:visited, body.kayak #calendar .gCalFlow a:hover {
+        color: inherit;
+        _color: black;
+        background-color: transparent;
+        text-decoration: none; }
+      body.kayak #calendar .gCalFlow a:hover {
+        text-decoration: underline; }
+      body.kayak #calendar .gCalFlow .gcf-header-block {
+        padding: 5px 4px;
+        background: transparent; }
+      body.kayak #calendar .gCalFlow .gcf-title-block {
+        font-weight: bold;
+        font-family: "Alfa Slab One", serif;
+        font-size: 24px;
+        color: white; }
+        body.kayak #calendar .gCalFlow .gcf-title-block a, body.kayak #calendar .gCalFlow .gcf-title-block a:visited, body.kayak #calendar .gCalFlow .gcf-title-block a:hover {
+          _color: white; }
+      body.kayak #calendar .gCalFlow .gcf-last-update-block {
+        font-size: 76%;
+        text-align: right;
+        bottom: 0;
+        right: 0;
+        padding-right: 4px;
+        position: absolute; }
+      body.kayak #calendar .gCalFlow .gcf-item-container-block {
+        position: relative;
+        overflow: hidden;
+        overflow-y: auto;
+        height: 90%; }
+      body.kayak #calendar .gCalFlow .gcf-item-block {
+        position: relative;
+        overflow: hidden;
+        border-bottom: 5px dotted white;
+        padding: 2px;
+        margin: 2px 0; }
+      body.kayak #calendar .gCalFlow .gcf-item-header-block {
+        white-space: nowrap;
+        overflow: hidden; }
+      body.kayak #calendar .gCalFlow .gcf-item-date-block {
+        font-size: 76%;
+        font-weight: bold; }
+      body.kayak #calendar .gCalFlow .gcf-item-body-block {
+        font-size: 80%;
+        font-color: #999;
+        max-height: 2.45em; }
+  body.kayak #gallery .item {
+    height: 110px;
+    border: 2px solid white;
+    background-size: cover; }
+  body.kayak #kayakA {
+    height: 50vh;
+    background-position: center top;
+    background-image: url(../images/kayak/kayak-A.jpg); }
+    body.kayak #kayakA .container {
+      position: relative;
+      height: 100%; }
+      body.kayak #kayakA .container .row {
+        position: relative;
+        height: 100%; }
+        body.kayak #kayakA .container .row .to-bottom {
+          position: absolute;
+          bottom: -30px;
+          width: 100%; }
+          body.kayak #kayakA .container .row .to-bottom h3 {
+            color: white;
+            letter-spacing: 3px;
+            text-transform: uppercase; }
+  body.kayak #sponsors .col-sm-3.col-xs-4 {
+    height: 80px; }
+    body.kayak #sponsors .col-sm-3.col-xs-4 a {
+      box-shadow: none; }
+      body.kayak #sponsors .col-sm-3.col-xs-4 a img {
+        transition: all 200ms ease-in-out;
+        filter: grayscale(100%);
+        max-width: 200px;
+        width: 100%;
+        margin: 20px auto; }
+      body.kayak #sponsors .col-sm-3.col-xs-4 a:hover img {
+        filter: grayscale(0%); }
+  body.kayak #kayakV {
+    background-image: url(../images/kayak/kayak-V.jpg);
+    height: 50vh;
+    background-position: center bottom; }
+  body.kayak footer {
+    padding: 0;
+    color: #555658; }
+    body.kayak footer #gmap {
+      height: 400px; }
+    body.kayak footer .container {
+      margin-top: -400px;
+      padding-top: 100px; }
 
 /*# sourceMappingURL=styles.css.map */
