@@ -4,10 +4,13 @@ body.kayak {
 	
 	header {
 		background-image: url(../images/kayak/river.jpg);
+		background-position: left bottom; 
 		background-color: white;
 		color: red;
-		height: 70vh;
-		
+		height: 93vh;
+		@include breakpoint(sm){
+			height: 70vh;
+		}
 		.row, .container {
 			position: relative;
 			height: 100%;
@@ -15,16 +18,39 @@ body.kayak {
 		
 		.headline {
 			position: absolute;
-			bottom: 200px;
+			bottom: 0px;
+			z-index: 300;
+		    width: 100%;
 			h1, h2 {
 				text-shadow: none;
 			}
-			h1 { margin: 10px 0 10px}
+			h1 { 
+				margin: 10px 0 10px;
+				font-size: 32px;
+			}
 			h2 { 
 				color: $gray-m;
 				margin: 0 0 10px;
-				font-size: 32px;
+				font-size: 24px;
 				text-transform: uppercase;
+			}
+			@include breakpoint(sm){
+				bottom: 350px;
+				h1 {
+					margin: 10px 0 10px;
+					font-size: 60px;
+				}
+				h2 { 
+					color: $gray-m;
+					margin: 0 0 10px;
+					font-size: 28px;
+					line-height: 42px;
+					text-transform: uppercase;
+				}
+			}
+			@include breakpoint(md){ 
+				width: 66.66666667%;
+				bottom: 200px;
 			}
 		}
 		
@@ -34,6 +60,13 @@ body.kayak {
 		.row {
 			position: relative;
 			z-index: 1000;	
+			
+			img {
+				margin-bottom: 50px;
+				@include breakpoint(md){ 
+					margin-bottom: 0;
+				}
+			}
 		}
 		&::before, &::after {
 			content: "";
@@ -124,48 +157,15 @@ body.kayak {
 			    font-color: #999;
 			    max-height: 2.45em;
 			  }
-			}
-			
-			// design
-/*
-			.gCalFlow {
-			  $radius_size: 4px;
-			  $light_color: #fff;
-			  $dark_color: #eee;
-			  border-style: solid;
-			  border-width: 1px;
-			  border-color: #ccc #999 #999 #ccc;
-			  -webkit-border-radius: $radius_size;
-			  -moz-border-radius: $radius_size;
-			  border-radius: $radius_size;
-			  background: -webkit-gradient(linear, left top, left bottom, from($light_color), to($dark_color));
-			  background: -moz-linear-gradient(top, $light_color, $dark_color);
-			  background: -o-linear-gradient(top, $light_color, $dark_color);
-			  background: linear-gradient(to bottom, $light_color, $dark_color);
-			  filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#ffffffff,EndColorStr=#ffeeeeee); zoom:1;
-			  color: blak;
-			
-			  .gcf-header-block {
-			    $light_color: #AAB1DC;
-			    $dark_color: #3B4CA5;
-			    -webkit-border-top-left-radius: $radius_size;
-			    -webkit-border-top-right-radius: $radius_size;
-			    -moz-border-top-left-radius: $radius_size;
-			    -moz-border-top-right-radius: $radius_size;
-			    border-top-left-radius: $radius_size;
-			    border-top-right-radius: $radius_size;
-			    background: -webkit-gradient(linear, left top, left bottom, from($light_color), to($dark_color));
-			    background: -moz-linear-gradient(top, $light_color, $dark_color);
-			    background: -o-linear-gradient(top, $light_color, $dark_color);
-			    background: linear-gradient(to bottom, $light_color, $dark_color);
-			    filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#ffAAB1DC,EndColorStr=#ff3B4CA5); zoom:1;
-			  }
-			  .gcf-item-body-block {
-			    color: #333;
-			  }
-			}
-*/
+		}
 		
+		
+		img {
+			margin: 50px auto 0;
+			@include breakpoint(md){ 
+				margin: 150px auto 0;
+			}
+		}
 		
 		
 	}
@@ -181,9 +181,12 @@ body.kayak {
 		}
 	}
 	#kayakA {
-		height: 50vh;
+		height: 70vh;
 		background-position: center top;
 		background-image: url(../images/kayak/kayak-A.jpg);
+		@include breakpoint(sm){
+			height: 50vh;	
+		}
 		.container {
 			position: relative;
 			height: 100%;
@@ -205,17 +208,20 @@ body.kayak {
 		
 	}
 	#sponsors {
-		.col-sm-3.col-xs-4 {
+		padding: 80px 0 50px;
+		.col-xs-12 {
 			height: 80px;
+			margin-bottom: 30px;
 			a{
 				box-shadow: none;
-				
+				width: 100%;
+				margin-bottom: 20px;
 				img {
 				    transition: all 200ms ease-in-out;
 				    filter: grayscale(100%);
+				    height: 80px;
 				    max-width: 200px;
-				    width: 100%;
-				    margin: 20px auto;
+				    //width: 100%;
 			    }
 			    &:hover img {
 				    filter: grayscale(0%);
@@ -226,19 +232,65 @@ body.kayak {
 	}
 	#kayakV {
 		background-image: url(../images/kayak/kayak-V.jpg);
-		height: 50vh;
-		background-position: center bottom ;
+		height: 90vh;
+		background-position: center bottom;
+		position: relative;
+		@include breakpoint(sm){
+			height: 50vh;	
+		}
+		.container {
+			height: 100%;
+			position: relative;
+			
+			.to-bottom {
+				position: absolute;
+				bottom: 0;
+				width: 100%;
+				
+			}
+			
+		}
+		
+		.panel {
+			position: relative;
+			//background: red;
+			z-index: 100;
+			&::before {
+				content: '';
+				border: 5px dashed $yellow;
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				z-index: 200;
+				top: -10px;
+				left: -10px;
+			}
+			
+		}
 	}
 	footer {
 		padding: 0;
 		color: $gray-m;
+		
+		border-top: 50px solid $yellow; 
 		#gmap {
 			height: 400px;
 		}
 		.container {
-			margin-top: -400px;
-			padding-top: 100px;
+			//height: 40vh;
+			padding-top: 50px;
+			
+			@include breakpoint(md){
+				padding-top: 100px;
+				margin-top: -400px;
+			}
+			
+			.panel {
+				box-shadow: 0 5px 25px rgba(black, .5);
+			}
 		}
+		
+		
 	}
 	
 }
