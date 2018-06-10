@@ -309,6 +309,12 @@ body.coc {
 		}
 	}
 	&.coc-liberland {
+		#history {
+			background-image: url(../images/coc/masterplan.jpg);
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
 		#future {
 			background-image: url(../images/coc/circuit.svg);
 			background-position: right bottom;

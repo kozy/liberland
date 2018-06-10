@@ -510,21 +510,49 @@ body.application input[type=checkbox] {
 .modal .modal-title {
   display: inline; }
 
-body.embassy header {
-  background: white;
-  color: red; }
-  body.embassy header h1, body.embassy header h2 {
-    text-shadow: none; }
-  body.embassy header h1 {
-    margin: 30px 0 10px; }
-  body.embassy header h2 {
-    color: #555658;
-    margin: 0 0 30px; }
-  body.embassy header .flag {
-    width: 100%;
-    height: 30px;
-    background: #FFCB05 url(/images/header-bg.png) repeat-x;
-    background-size: contain; }
+body.embassy {
+  background: white; }
+  body.embassy header {
+    background: white;
+    color: #35373A;
+    /*
+    		.flag {
+    			width: 100%;
+    			height: 30px;
+    			background: $yellow url(../images/header-bg.png) repeat-x;
+    			background-size: contain; 
+    		}
+    */ }
+    body.embassy header .slant {
+      position: relative;
+      height: 100%; }
+      body.embassy header .slant .box {
+        background: white;
+        position: relative;
+        height: 100%;
+        z-index: 300; }
+      body.embassy header .slant:before, body.embassy header .slant:after {
+        content: "";
+        background: white;
+        height: 100%;
+        width: 50px;
+        position: absolute;
+        transform: skew(-20deg);
+        z-index: 290;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        top: 0;
+        bottom: 0; }
+      body.embassy header .slant:after {
+        right: 0; }
+    body.embassy header h1, body.embassy header h2 {
+      text-shadow: none; }
+    body.embassy header h1 {
+      margin: 30px 0 10px; }
+    body.embassy header h2 {
+      color: #555658;
+      margin: 0 0 30px; }
+  body.embassy footer img.flag {
+    width: 3%; }
 
 body.coc header {
   background: white;
@@ -746,6 +774,11 @@ body.coc.coc-about #lists {
   				background: url(../images/coc/dot-grid.png);
   			}
   */ }
+body.coc.coc-liberland #history {
+  background-image: url(../images/coc/masterplan.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover; }
 body.coc.coc-liberland #future {
   background-image: url(../images/coc/circuit.svg);
   background-position: right bottom;
@@ -849,7 +882,10 @@ body.kayak {
       @media (min-width: 992px) {
         body.kayak header .headline {
           width: 66.66666667%;
-          bottom: 200px; } }
+          bottom: 200px; }
+          body.kayak header .headline h2 {
+            color: black;
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.95); } }
   body.kayak #about {
     position: relative; }
     body.kayak #about .row {
@@ -881,7 +917,7 @@ body.kayak {
     body.kayak #calendar .gCalFlow {
       position: relative;
       width: 100%;
-      height: 400px;
+      height: 200px;
       float: left;
       font-size: 90%;
       overflow: hidden;
@@ -989,6 +1025,9 @@ body.kayak {
     body.kayak #kayakV .container {
       height: 100%;
       position: relative; }
+      body.kayak #kayakV .container h3 {
+        color: white;
+        text-transform: uppercase; }
       body.kayak #kayakV .container .to-bottom {
         position: absolute;
         bottom: 0;
@@ -1019,5 +1058,49 @@ body.kayak {
           margin-top: -400px; } }
       body.kayak footer .container .panel {
         box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5); }
+
+body.embassy {
+  background: white; }
+  body.embassy header {
+    background: white;
+    color: #35373A;
+    /*
+    		.flag {
+    			width: 100%;
+    			height: 30px;
+    			background: $yellow url(../images/header-bg.png) repeat-x;
+    			background-size: contain; 
+    		}
+    */ }
+    body.embassy header .slant {
+      position: relative;
+      height: 100%; }
+      body.embassy header .slant .box {
+        background: white;
+        position: relative;
+        height: 100%;
+        z-index: 300; }
+      body.embassy header .slant:before, body.embassy header .slant:after {
+        content: "";
+        background: white;
+        height: 100%;
+        width: 50px;
+        position: absolute;
+        transform: skew(-20deg);
+        z-index: 290;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        top: 0;
+        bottom: 0; }
+      body.embassy header .slant:after {
+        right: 0; }
+    body.embassy header h1, body.embassy header h2 {
+      text-shadow: none; }
+    body.embassy header h1 {
+      margin: 30px 0 10px; }
+    body.embassy header h2 {
+      color: #555658;
+      margin: 0 0 30px; }
+  body.embassy footer img.flag {
+    width: 3%; }
 
 /*# sourceMappingURL=styles.css.map */
